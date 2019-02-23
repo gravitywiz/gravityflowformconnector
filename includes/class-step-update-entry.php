@@ -556,6 +556,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		 * Defines the search criteria for entry when Lookup Conditional Logic has been set in step settings
 		 *
 		 * @deprecated 1.5.1
+		 * @since 1.5.0
 		 *
 		 * @param array|null $form
 		 * @param array|null $entry
@@ -571,7 +572,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		/**
 		 * Defines the search criteria for entry when Lookup Conditional Logic has been set in step settings
 		 *
-		 * @since 1.4.3-dev
+		 * @since 1.5
 		 *
 		 * @param array|null $form
 		 * @param array|null $entry
@@ -613,10 +614,11 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		 * Defines the sort criteria for entry when Lookup Conditional Logic has been set in step settings
 		 *
 		 * @deprecated 1.5.1
+		 * @since 1.5.0
 		 *
 		 * @return array
 		 */
-		public static function gravityflow_entry_lookup_sort_criteria() {
+		public function gravityflow_entry_lookup_sort_criteria() {
 			_deprecated_function( __METHOD__, '1.5.1', 'Gravity_Flow_Step_Update_Entry::get_entry_lookup_sort_criteria' );
 
 			return $this->get_entry_lookup_sort_criteria();
@@ -625,7 +627,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		/**
 		 * Defines the sort criteria for entry when Lookup Conditional Logic has been set in step settings
 		 *
-		 * @since 1.4.3-dev
+		 * @since 1.5.1
 		 *
 		 * @return array
 		 */
