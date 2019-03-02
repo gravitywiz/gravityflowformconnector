@@ -1,4 +1,0 @@
-- Added support for the license key constant
-- Updated Gravity_Flow_Step_Update_Entry::get_entry_lookup_search_criteria() to support processing merge tags. Credit: Jake Jackson.
-- Deprecated Gravity_Flow_Step_Update_Entry::gravityflow_entry_lookup_sort_criteria()
-- Deprecated Gravity_Flow_Step_Update_Entry::gravityflow_entry_lookup_search_criteria()

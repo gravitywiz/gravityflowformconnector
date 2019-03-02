@@ -2,8 +2,8 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.0
-Tested up to: 4.9.8
-License: GPLv3 or later
+Tested up to: 5.1
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Create, update and link entries in Gravity Flow.
@@ -41,6 +41,12 @@ The Gravity Flow Form Connector Extension will work with any license of [Gravity
 
 
 == ChangeLog ==
+
+= 1.6 =
+- Added support for the license key constant GRAVITY_FLOW_FORM_CONNECTOR_LICENSE_KEY.
+- Updated Gravity_Flow_Step_Update_Entry::get_entry_lookup_search_criteria() to support processing merge tags. Credit: Jake Jackson.
+- Deprecated Gravity_Flow_Step_Update_Entry::gravityflow_entry_lookup_sort_criteria()
+- Deprecated Gravity_Flow_Step_Update_Entry::gravityflow_entry_lookup_search_criteria()
 
 = 1.5 =
 - Added a new step type, Update Fields, for mapping values from other entries into the current entry including support for lookup conditional logic.
