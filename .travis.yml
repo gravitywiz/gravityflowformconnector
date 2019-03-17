@@ -2,32 +2,32 @@ dist: trusty
 language: php
 cache:
   directories:
-    - node_modules
+  - node_modules
 php:
-  - 5.4
-  - 5.5
-  - 5.6
-  - 7.0
-  - 7.1
+- 5.4
+- 5.5
+- 5.6
+- 7.0
+- 7.1
 matrix:
   include:
-    - php: 5.2
-      dist: precise
-    - php: 5.3
-      dist: precise
-    - php: 7.2
-    - php: 7.3
+  - php: 5.2
+    dist: precise
+  - php: 5.3
+    dist: precise
+  - php: 7.2
+  - php: 7.3
 env:
   matrix:
-    - WP_VERSION=latest WP_MULTISITE=0
-    - WP_VERSION=4.9 WP_MULTISITE=0
-    - WP_VERSION=4.8 WP_MULTISITE=0
-    - WP_VERSION=4.7 WP_MULTISITE=0
-    - WP_VERSION=4.6 WP_MULTISITE=0
-    - WP_VERSION=4.5 WP_MULTISITE=0
-    - WP_VERSION=4.4 WP_MULTISITE=0
+  - WP_VERSION=latest WP_MULTISITE=0
+  - WP_VERSION=4.9 WP_MULTISITE=0
+  - WP_VERSION=4.8 WP_MULTISITE=0
+  - WP_VERSION=4.7 WP_MULTISITE=0
+  - WP_VERSION=4.6 WP_MULTISITE=0
+  - WP_VERSION=4.5 WP_MULTISITE=0
+  - WP_VERSION=4.4 WP_MULTISITE=0
   global:
-    - WP_TRAVISCI=travis:phpunit
+  - WP_TRAVISCI=travis:phpunit
 before_script:
 - |
   # Remove Xdebug for a huge performance increase, but not from nightly or hhvm:
@@ -95,10 +95,7 @@ before_script:
 script: phpunit
 notifications:
   slack:
-    on_start: never
-    on_failure: always
-    on_success: change
-    secure: RrZ3tDCpJ4G/VmiKVgnAKaPM9vkbrq0c2Qhyxbrg6dMBQEIBzJZJnimq0VuJWzJSjtmGgQmbU8Dg54TEVNIU7zZAi2/9M1CQLRY+dH3PWBjv55+YDtXQRXiChnnR8C47dW9QPV/9EgJ2ksy7K4gIDTuhzNdVjBdPjU4xk4c2Y5sfS7F3EaWw16hXCcIL2PsksUFAtdtaCPpC/JSPS6hjQWc2Uxr4iBeVW8aZW06F9guAF12Dsp9voVZUnUZDso/aCfoqC5QPLu1G5WbYDzL+Fd0ph7W5RHP+koMW+cuFQIj6Fl0A8CfILJWhp+REQx1rxTHJgJ77oNuefv3xwcD7U6NNp1zuKYAQaJAlPYMv+rHngB1zwYdcL/VMg5k4KUUMsG3b/mN+yuW9HYfgNlYAUriE+HKECBdphCfOx5PhG0IXIfa3yVP92sH0Yo7CCQRBwfYKatLDAsTarTBAq/yFSGbeI8ivUBLp9tpG6/mxgkngPuSMtODyCm4EPC+0CuCm//ta+xOGNxxZ8Q+Rg+X7q/vlz6ygC7IMKFa7TKlCeA9dGwro9My8Os8TVBdqwjhBiIY/kMDwCNis1M4bHd7Yds2HfCq4CRJJln6+N9mEC+jjxKmtL3dB+/yWT6Hjkk9Qa4FtDHe1Dk6E7cfBDQjdKJLpNydJPxuazbInvURYnOc=
+    secure: jDvKvgcIrx1UKrM/3Ny/TVHP9QQURBvQ4lTSBqbn871+TMzlrIAytbQjxD0DJ8nuqbHTybyOHhS4AzmeRjnlb2WGHVaJemWkkRzIv9/IfBLZ5OWcG5L1UpH6EaLw334ReVwnwo+FmEbxNtzv4Y1J6v1zFM4KacGKMoR7wtkehQuTMddXQY27zsE6QOaoHLXQ0WdfmcdhvuM43Ki4QgP07I5OPkGJIOOBD5CoeE7+NYmw+K9Z49I7UJ560s08y2K+/5bcpFHtmX84Fe9sSDiIEfEutmvYm1GnJ066MN7iXiogdnu5Src9hepOYcA6I31pw7pAbyDAhNk5cccjqBr5DU8xltNP5Ar34GD3qZWkxu2sPwBn2WLkviAJfsFdUYeTjNjzGF2rP5Q/Mjm87ZF/wMqduIKDCEWqYB7bufXBbPHEyWWltT2jTFnUvrdice9RPlwjDkjUTyq1dLZbEXpCRqfYwi53XvDIBcQk+Omhy4GbvWto5rOecaEDSovR+b2RYdDvmCAY2m6jc1winE/xNncx1mk62COoook+B7wJixVH+Ejk2OGVp+FIGLYNycAwwWSoR2jqIV35G9WKwMSwN2e9ol+SEE48Hu76x5m1YGSUrg2v+9SPtuooEzJLrLme98dp/XHRtkVdSE1wzGSoDnTGBfFvuVRXFYdwR4WihNM=
   webhooks:
     urls:
       secure: gEfRUPngUkfJIke6ZBxED14AHlcDLoKyX+j7UJR9hHWiI9ydoBVU7X+td8sgx0oBgckDvbXdHgZl+LR7ftV5CIAhyeWTgJPny5+YsECU3+SSnL6NvwL3SGGavhhgt495NkW0fyvW2m92TqBSgcQMnDkd7Klxb+7euxOIwEKsVtVWd0UAQgr2Pkg4T35ZHtvqPFsIOdOqUB8l93H6cTl4Z1/bHHlPKWKaGMNkGca/VEP/+NIyi2uYVqcbsGR439vvOw/tJI+pn6202K0glPF7zZDjCvzZ4litSgzHh3n6C4qOciVFqvCWmC2JSFVfii5ZhrLORsvHRmph7iuiXvsrdJ+U/RydB1kP5K0ONGf9NR79ulLT07s+FNd4tRO+YHjfKtPfxpbkRMQG7IMyay2tym2cI55nw2Zm3xkgXmU33NHNczDbQujY+qs7vKnnFX4ExyPKUWFrKQMNaD3102kIf2O5jeyNOnLxokYu4yyC0thPenCsBwLysD0VLDG4Mu/Gw9kVLp7BtR4tBqzRzwf0fcXMpkmuzQlaCExJScwyk6TwpFvW/GQ4DIKAHVFagMNme2Ka3piQG88mJJuGDqcFMiWsvyBVGPb24U0SvALB8EWcceWVyJ7QDshjE1zkUjBnSTlaOzQbAxTf/19Ipd/rQnbN02mE90HN/2CV2AHlF9U=
