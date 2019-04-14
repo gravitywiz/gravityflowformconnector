@@ -182,7 +182,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				'value_field_title'   => esc_html__( 'Value', 'gravityflowformconnector' ),
 				'value_choices'       => $this->field_mappings( 'source_form_id' ),
 				'key_choices'         => $this->value_mappings(),
-				'tooltip'             => '<h6>' . esc_html__( 'Mapping', 'gravityflowformconnector' ) . '</h6>' . esc_html__( 'Map the fields of this form to the selected form. Values from this form will be saved in the entry in the selected form', 'gravityflowformconnector' ),
+				'tooltip'             => '<h6>' . esc_html__( 'Mapping', 'gravityflowformconnector' ) . '</h6>' . esc_html__( 'Map the fields of the selected form to this form. Values from the selected entry will be saved in the entry in this form.', 'gravityflowformconnector' ),
 				'dependency'          => array(
 					'field'  => 'action',
 					'values' => array( 'update' ),
