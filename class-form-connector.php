@@ -83,10 +83,10 @@ if ( class_exists( 'GFForms' ) ) {
 		public function init() {
 			parent::init();
 			add_filter( 'gform_pre_render', array( $this, 'filter_gform_pre_render' ) );
-			add_action( 'gform_after_submission', array( $this, 'action_gform_after_submission' ), 999, 2 );
-			add_filter( 'gform_form_tag', array( $this, 'filter_gform_form_tag' ), 10, 2 );
 			add_filter( 'gform_validation', array( $this, 'filter_gform_validation' ) );
 			add_filter( 'gform_save_field_value', array( $this, 'filter_save_field_value' ), 10, 5 );
+			add_action( 'gform_after_submission', array( $this, 'action_gform_after_submission' ), 999, 2 );
+
 			add_filter( 'gform_pre_replace_merge_tags', array( $this, 'filter_gform_pre_replace_merge_tags' ), 10, 7 );
 			add_filter( 'gform_post_payment_completed', array( $this, 'action_gform_post_payment_completed' ), 10, 3 );
 		}
@@ -154,6 +154,13 @@ if ( class_exists( 'GFForms' ) ) {
 				return $form;
 			}
 
+			$form_id        = absint( $form['id'] );
+			$target_form_id = absint( $parent_entry_current_step->target_form_id );
+
+			if ( $form_id !== $target_form_id ) {
+				return $form;
+			}
+
 			$current_user_assignee_key = gravity_flow()->get_current_user_assignee_key();
 
 			if ( ! $current_user_assignee_key || $current_user_assignee_key == 'user_id|0' ) {
@@ -168,6 +175,8 @@ if ( class_exists( 'GFForms' ) ) {
 				$user_id = 0;
 			}
 			$form = $this->prepopulate_form( $form, $parent_entry_current_step, $user_id );
+
+			add_filter( 'gform_form_tag_' . $form_id, array( $this, 'filter_gform_form_tag' ), 10, 2 );
 
 			return $form;
 		}
@@ -320,22 +329,26 @@ if ( class_exists( 'GFForms' ) ) {
 				return;
 			}
 
-			$parent_entry_id = absint( rgpost( 'workflow_parent_entry_id' ) );
-
 			$hash = rgpost( 'workflow_hash' );
 
 			if ( empty( $hash ) ) {
 				return;
 			}
 
-			$parent_entry = GFAPI::get_entry( $parent_entry_id );
-
-			$api = new Gravity_Flow_API( $parent_entry['form_id'] );
-
-			$current_step = $api->get_current_step( $parent_entry );
+			$parent_entry_id = absint( rgpost( 'workflow_parent_entry_id' ) );
+			$parent_entry    = GFAPI::get_entry( $parent_entry_id );
+			$api             = new Gravity_Flow_API( $parent_entry['form_id'] );
+			$current_step    = $api->get_current_step( $parent_entry );
 
 			if ( empty( $current_step ) || ! $current_step instanceof Gravity_Flow_Step_Form_Submission ) {
 				return;
+			}
+
+			$form_id        = absint( $form['id'] );
+			$target_form_id = absint( $current_step->target_form_id );
+
+			if ( $form_id !== $target_form_id ) {
+				return $form;
 			}
 
 			$verify_hash = $this->get_workflow_hash( $parent_entry_id, $current_step );
@@ -391,7 +404,12 @@ if ( class_exists( 'GFForms' ) ) {
 				return $form_tag;
 			}
 
-			$parent_entry_id = absint( rgget( 'workflow_parent_entry_id' ) );
+			$form_id     = absint( $form['id'] );
+			$url_form_id = absint( rgget( 'id' ) );
+
+			if ( $form_id !== $url_form_id ) {
+				return $form_tag;
+			}
 
 			$hash = sanitize_text_field( rgget( 'workflow_hash' ) );
 
@@ -399,11 +417,10 @@ if ( class_exists( 'GFForms' ) ) {
 				return $form_tag;
 			}
 
-			$parent_entry = GFAPI::get_entry( $parent_entry_id );
-
-			$api = new Gravity_Flow_API( $parent_entry['form_id'] );
-
-			$current_step = $api->get_current_step( $parent_entry );
+			$parent_entry_id = absint( rgget( 'workflow_parent_entry_id' ) );
+			$parent_entry    = GFAPI::get_entry( $parent_entry_id );
+			$api             = new Gravity_Flow_API( $parent_entry['form_id'] );
+			$current_step    = $api->get_current_step( $parent_entry );
 
 			if ( empty( $current_step ) ) {
 				return $form_tag;
@@ -472,10 +489,17 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$current_step = $api->get_current_step( $parent_entry );
 
-			if ( empty( $current_step ) ) {
+			if ( empty( $current_step ) || ! $current_step instanceof Gravity_Flow_Step_Form_Submission ) {
 				$this->customize_validation_message( __( 'This form is no longer accepting submissions.', 'gravityflowformconnector' ) );
 				$validation_result['is_valid'] = false;
 
+				return $validation_result;
+			}
+
+			$form_id        = absint( $validation_result['form']['id'] );
+			$target_form_id = absint( $current_step->target_form_id );
+
+			if ( $form_id !== $target_form_id ) {
 				return $validation_result;
 			}
 
@@ -582,6 +606,13 @@ if ( class_exists( 'GFForms' ) ) {
 			$current_step = $api->get_current_step( $parent_entry );
 
 			if ( empty( $current_step ) || ! $current_step instanceof Gravity_Flow_Step_Form_Submission ) {
+				return $value;
+			}
+
+			$form_id        = absint( $form['id'] );
+			$target_form_id = absint( $current_step->target_form_id );
+
+			if ( $form_id !== $target_form_id ) {
 				return $value;
 			}
 
