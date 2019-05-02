@@ -514,7 +514,7 @@ if ( class_exists( 'GFForms' ) ) {
 
 			$verify_hash = $this->get_workflow_hash( $parent_entry_id, $current_step );
 			if ( ! hash_equals( $hash, $verify_hash ) ) {
-				$this->customize_validation_message( __( 'There was a problem with you submission. Please use the link provided.', 'gravityflowformconnector' ) );
+				$this->customize_validation_message( __( 'There was a problem with your submission. Please use the link provided.', 'gravityflowformconnector' ) );
 				$validation_result['is_valid'] = false;
 			}
 
