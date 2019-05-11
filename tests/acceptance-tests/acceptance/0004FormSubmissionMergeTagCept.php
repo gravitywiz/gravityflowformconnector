@@ -7,6 +7,18 @@ $I = new AcceptanceTester( $scenario );
 
 $I->wantTo( 'Test the {workflow_form_submission_link} merge tag in the form confirmation message.' );
 
+// Update the target page in the submission step
+$form_id = GFFormsModel::get_form_id( '0004 Form Submission Merge Tag Source' );
+$steps = gravity_flow()->get_steps( $form_id );
+foreach ( $steps as $step ) {
+	if ( $step->get_name() == 'Form Submission' ) {
+		$submit_page = get_page_by_title( '0004 Form Submission Merge Tag Target' );
+		$feed_meta = $step->get_feed_meta();
+		$feed_meta['submit_page'] = $submit_page->ID;
+		gravity_flow()->update_feed_meta( $step->get_id(), $feed_meta );
+	}
+}
+
 // Make sure we're logged out
 $I->logOut();
 $I->resetCookie( 'gflow_access_token' );
