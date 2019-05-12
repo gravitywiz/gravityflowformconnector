@@ -2,7 +2,7 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.0
-Tested up to: 5.1
+Tested up to: 5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -41,6 +41,11 @@ The Gravity Flow Form Connector Extension will work with any license of [Gravity
 
 
 == ChangeLog ==
+
+= 1.7 =
+- Updated help text on Update Fields step settings screen.
+- Updated translations.
+- Fixed the form display and submission processes for the Form Submission step running for both the parent and nested form when used with GP Nested Forms.
 
 = 1.6 =
 - Added support for the license key constant GRAVITY_FLOW_FORM_CONNECTOR_LICENSE_KEY.

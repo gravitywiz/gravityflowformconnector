@@ -1,2 +1,0 @@
-- Updated help text on Update Fields step settings screen.
-- Fixed the form display and submission processes for the Form Submission step running for both the parent and nested form when used with GP Nested Forms.
