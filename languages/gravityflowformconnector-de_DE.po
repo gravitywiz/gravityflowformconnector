@@ -1,15 +1,15 @@
-# Copyright 2015-2018 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
 # Christian Herrmann, 2017
-# FX Bénard <fxb@wp-translations.org>, 2018
+# FX Bénard <fxb@wp-translations.org>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2018-12-16 18:26:50+00:00\n"
+"POT-Creation-Date: 2019-03-02 17:40:01+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
-"Last-Translator: FX Bénard <fxb@wp-translations.org>, 2018\n"
+"Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: German (Germany) (https://www.transifex.com/gravityflow/teams/50678/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,7 +62,7 @@ msgstr ""
 #: includes/class-step-delete-entry.php:22
 #: includes/class-step-delete-entry.php:32
 msgid "Delete an Entry"
-msgstr ""
+msgstr "Einen Eintrag löschen"
 
 #: includes/class-step-delete-entry.php:36
 #: includes/class-step-new-entry.php:37
@@ -108,15 +108,15 @@ msgstr "Privater Schlüssel"
 
 #: includes/class-step-delete-entry.php:78
 msgid "Delete Action"
-msgstr ""
+msgstr "Aktion löschen"
 
 #: includes/class-step-delete-entry.php:84
 msgid "Permanently delete the entry"
-msgstr ""
+msgstr "Den Eintrag dauerhaft löschen"
 
 #: includes/class-step-delete-entry.php:88
 msgid "Move the entry to the trash"
-msgstr ""
+msgstr "Den Eintrag in den Papierkorb legen"
 
 #: includes/class-step-delete-entry.php:102
 #: includes/class-step-update-entry.php:104
@@ -129,6 +129,9 @@ msgid ""
 "Select the field which will contain the entry ID of the entry that will be "
 "deleted. This is used to lookup the entry so it can be deleted."
 msgstr ""
+"Das Feld auswählen, welches die Eintrags-ID des Eintrags enthalten wird, der"
+" gelöscht werden soll. Dies wird benutzt, um dein Eintrag zu ermitteln, "
+"sodass er gelöscht werden kann."
 
 #: includes/class-step-delete-entry.php:123
 #: includes/class-step-update-entry.php:131
@@ -138,11 +141,11 @@ msgstr "Eintrags-ID (Selbst)"
 
 #: includes/class-step-delete-entry.php:177
 msgid "Moved entry to the trash."
-msgstr ""
+msgstr "Eintrag wurde in den Papierkorb gelegt."
 
 #: includes/class-step-delete-entry.php:182
 msgid "Scheduled entry for deletion on workflow completion."
-msgstr ""
+msgstr "Geplanter Eintrag zur Löschung bei Beendigung des Worfklows."
 
 #: includes/class-step-form-submission.php:20
 #: includes/class-step-form-submission.php:36
@@ -376,7 +379,7 @@ msgid ""
 "Select the field which will contain the entry ID of the entry that will be "
 "updated. This is used to lookup the entry so it can be updated."
 msgstr ""
-"Das Feld auswählen, welches die Eintrags-ID des Eintrags enthalten wird, die"
+"Das Feld auswählen, welches die Eintrags-ID des Eintrags enthalten wird, der"
 " aktualisiert werden soll. Dies wird benutzt, um dein Eintrag zu ermitteln, "
 "sodass er aktualisiert werden kann."
 
@@ -397,52 +400,55 @@ msgstr "Genehmigung"
 msgid "User Input"
 msgstr "Benutzereingabe"
 
-#: includes/class-step-update-entry.php:697
+#: includes/class-step-update-entry.php:737
 msgid "Select an assignee"
 msgstr "Beauftragten auswählen"
 
-#: includes/class-step-update-entry.php:703
+#: includes/class-step-update-entry.php:743
 msgid "User (created_by)"
 msgstr "Benutzer (created_by)"
 
 #: includes/class-step-update-fields.php:20
 msgid "Update Fields"
-msgstr ""
+msgstr "Felder aktualisieren"
 
 #: includes/class-step-update-fields.php:45
 #: includes/class-step-update-fields.php:205
 msgid "Update Field Values"
-msgstr ""
+msgstr "Feld-Werte aktualisieren"
 
 #: includes/class-step-update-fields.php:88
 msgid "Source Form"
-msgstr ""
+msgstr "Quellformular"
 
 #: includes/class-step-update-fields.php:104
 msgid "Entry Lookup"
-msgstr ""
+msgstr "Eintragsermittlung"
 
 #: includes/class-step-update-fields.php:110
 msgid "Conditional Logic"
-msgstr ""
+msgstr "Bedingte Logik"
 
 #: includes/class-step-update-fields.php:111
 msgid "Select a field containing the source entry ID."
-msgstr ""
+msgstr "Wähle ein Feld, das die Quell-Eintrags-ID beinhaltet."
 
 #: includes/class-step-update-fields.php:122
 msgid "Lookup Conditional Logic"
-msgstr ""
+msgstr "Bedingte Ermittlungslogik"
 
 #: includes/class-step-update-fields.php:124
 msgid "Look up the first entry matching {0} of the following criteria:"
 msgstr ""
+"Den ersten Eintrag ermitteln, der {0} der folgenden Kriterien erfüllt:"
 
 #: includes/class-step-update-fields.php:140
 msgid ""
 "Select the field which will contain the entry ID of the entry that values "
 "will be copied from."
 msgstr ""
+"Das Feld auswählen, welches die Eintrags-ID des Eintrags enthalten wird, "
+"dessen Werte kopiert werden sollen."
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow Form Connector"

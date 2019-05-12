@@ -1,4 +1,4 @@
-# Copyright 2015-2018 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
 # Ecron <ecron_89@hotmail.com>, 2017
 # Xavi Ivars <xavi.ivars@gmail.com>, 2017
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2018-12-16 18:26:50+00:00\n"
+"POT-Creation-Date: 2019-03-02 17:40:01+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/gravityflow/teams/50678/ca/)\n"
@@ -395,11 +395,11 @@ msgstr "Aprovació"
 msgid "User Input"
 msgstr "Introducció d'usuari"
 
-#: includes/class-step-update-entry.php:697
+#: includes/class-step-update-entry.php:737
 msgid "Select an assignee"
 msgstr "Seleccioneu un assignat"
 
-#: includes/class-step-update-entry.php:703
+#: includes/class-step-update-entry.php:743
 msgid "User (created_by)"
 msgstr "Usuari (creat per)"
 
