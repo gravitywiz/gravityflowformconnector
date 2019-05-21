@@ -46,6 +46,15 @@ if ( class_exists( 'GFForms' ) ) {
 
 		public static $form_submission_validation_error = '';
 
+		/**
+		 * Whether the current submission has a workflow hash that has been verified.
+		 *
+		 * @since 1.7.1
+		 *
+		 * @var bool
+		 */
+		protected $current_submission_verified = false;
+
 		public static function get_instance() {
 			if ( self::$_instance == null ) {
 				self::$_instance = new Gravity_Flow_Form_Connector();
@@ -89,6 +98,8 @@ if ( class_exists( 'GFForms' ) ) {
 
 			add_filter( 'gform_pre_replace_merge_tags', array( $this, 'filter_gform_pre_replace_merge_tags' ), 10, 7 );
 			add_filter( 'gform_post_payment_completed', array( $this, 'action_gform_post_payment_completed' ), 10, 3 );
+
+			add_filter( 'gravityflow_can_render_form', array( $this, 'filter_gravityflow_can_render_form' ), 10, 2 );
 		}
 
 		/**
@@ -355,6 +366,8 @@ if ( class_exists( 'GFForms' ) ) {
 			if ( ! hash_equals( $hash, $verify_hash ) ) {
 				return;
 			}
+
+			$this->current_submission_verified = true;
 
 			$assignee_key = gravity_flow()->get_current_user_assignee_key();
 			$is_assignee  = $current_step->is_assignee( $assignee_key );
@@ -701,6 +714,78 @@ if ( class_exists( 'GFForms' ) ) {
 
 				$api->process_workflow( $parent_entry_id );
 			}
+		}
+
+		/**
+		 * Overrides the default behaviour for the submit page and allows any form on a Form Submission step to be displayed in the workflow submit page.
+		 *
+		 * @since 1.7.1
+		 *
+		 * @param $can_render_form
+		 * @param $form_id
+		 *
+		 * @return bool|WP_Error
+		 */
+		public function filter_gravityflow_can_render_form( $can_render_form, $form_id ) {
+
+			if ( ! isset( $_REQUEST['workflow_parent_entry_id'] ) ) {
+				return $can_render_form;
+			}
+
+			$parent_entry_id = absint( $_REQUEST['workflow_parent_entry_id'] );
+
+			if ( empty( $parent_entry_id ) ) {
+				return $can_render_form;
+			}
+
+			$hash = $_REQUEST['workflow_hash'];
+
+			if ( empty( $hash ) ) {
+				return $can_render_form;
+			}
+
+			if ( $this->current_submission_verified ) {
+				// Submission was processed before this hook
+				return true;
+			}
+
+			$parent_entry = GFAPI::get_entry( $parent_entry_id );
+
+			if ( is_wp_error( $parent_entry ) ) {
+				return $can_render_form;
+			}
+
+			$api          = new Gravity_Flow_API( $parent_entry['form_id'] );
+			$current_step = $api->get_current_step( $parent_entry );
+
+			if ( empty( $current_step ) || ! $current_step instanceof Gravity_Flow_Step_Form_Submission ) {
+				$this->log_debug( __METHOD__ . '() assignee in the meta is not an assignee. Bailing.' );
+				$error = new WP_Error( 'invalid_step', esc_html__( 'The link to this form is no longer valid', 'gravityflowformconnector' ) );
+
+				return $error;
+			}
+
+			$target_form_id = absint( $current_step->target_form_id );
+
+			if ( $form_id !== $target_form_id ) {
+				$this->log_debug( __METHOD__ . '() the target form ID of the current step of the parent form is different to the requested form ID. Bailing.' );
+				$error = new WP_Error( 'invalid_form', esc_html__( 'The link to this form is no longer valid', 'gravityflowformconnector' ) );
+
+				return $error;
+			}
+
+			$verify_hash = $this->get_workflow_hash( $parent_entry_id, $current_step );
+
+			if ( hash_equals( $hash, $verify_hash ) ) {
+				$can_render_form = true;
+			} else {
+				$this->log_debug( __METHOD__ . '() invalid hash. Bailing.' );
+				$error = new WP_Error( 'invalid_form', esc_html__( 'The link to this form is no longer valid', 'gravityflowformconnector' ) );
+
+				return $error;
+			}
+
+			return $can_render_form;
 		}
 	}
 }
