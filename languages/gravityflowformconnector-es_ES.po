@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-03-02 17:40:01+00:00\n"
+"POT-Creation-Date: 2019-05-12 18:34:09+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/gravityflow/teams/50678/es_ES/)\n"
@@ -34,29 +34,30 @@ msgstr "Gestionar ajustes"
 msgid "Uninstall"
 msgstr "Desinstalar"
 
-#: class-form-connector.php:354
+#: class-form-connector.php:367
 msgid "Submission received."
 msgstr "Envío recibido."
 
-#: class-form-connector.php:416 class-form-connector.php:426
+#: class-form-connector.php:433 class-form-connector.php:443
 msgid "The link to this form is no longer valid."
 msgstr "El enlace a este formulario ya no es válido."
 
-#: class-form-connector.php:465
+#: class-form-connector.php:482
 msgid "This form is no longer valid."
 msgstr "Este formulario ya no es válido."
 
-#: class-form-connector.php:476
+#: class-form-connector.php:493
 msgid "This form is no longer accepting submissions."
 msgstr "Este formulario ya no acepta envíos."
 
-#: class-form-connector.php:486
+#: class-form-connector.php:510
 msgid "Your input is no longer required."
 msgstr "Ya no hace falta que escribas nada."
 
-#: class-form-connector.php:493
-msgid "There was a problem with you submission. Please use the link provided."
-msgstr "Hay un problema con tu envío. Por favor, usa el enlace proporcionado."
+#: class-form-connector.php:517
+msgid ""
+"There was a problem with your submission. Please use the link provided."
+msgstr ""
 
 #: includes/class-step-delete-entry.php:22
 #: includes/class-step-delete-entry.php:32
@@ -246,7 +247,6 @@ msgstr "Mapeo"
 #: includes/class-step-form-submission.php:101
 #: includes/class-step-new-entry.php:97 includes/class-step-new-entry.php:110
 #: includes/class-step-update-entry.php:159
-#: includes/class-step-update-fields.php:185
 msgid ""
 "Map the fields of this form to the selected form. Values from this form will"
 " be saved in the entry in the selected form"
@@ -443,6 +443,12 @@ msgid ""
 msgstr ""
 "Elige el campo que contiene el ID de entrada de la que se copiarán los "
 "valores."
+
+#: includes/class-step-update-fields.php:185
+msgid ""
+"Map the fields of the selected form to this form. Values from the selected "
+"entry will be saved in the entry in this form."
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow Form Connector"

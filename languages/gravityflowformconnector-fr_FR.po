@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-03-02 17:40:01+00:00\n"
+"POT-Creation-Date: 2019-05-12 18:34:09+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: French (France) (https://www.transifex.com/gravityflow/teams/50678/fr_FR/)\n"
@@ -32,31 +32,30 @@ msgstr "Gérer les réglages"
 msgid "Uninstall"
 msgstr "Désinstaller"
 
-#: class-form-connector.php:354
+#: class-form-connector.php:367
 msgid "Submission received."
 msgstr "Soumission reçue."
 
-#: class-form-connector.php:416 class-form-connector.php:426
+#: class-form-connector.php:433 class-form-connector.php:443
 msgid "The link to this form is no longer valid."
 msgstr "Le lien pour ce formulaire n’est plus valide."
 
-#: class-form-connector.php:465
+#: class-form-connector.php:482
 msgid "This form is no longer valid."
 msgstr "Ce formulaire n’est plus valide."
 
-#: class-form-connector.php:476
+#: class-form-connector.php:493
 msgid "This form is no longer accepting submissions."
 msgstr "Ce formulaire n’accepte plus les soumissions."
 
-#: class-form-connector.php:486
+#: class-form-connector.php:510
 msgid "Your input is no longer required."
 msgstr "Votre entrée n’est plus nécessaire."
 
-#: class-form-connector.php:493
-msgid "There was a problem with you submission. Please use the link provided."
+#: class-form-connector.php:517
+msgid ""
+"There was a problem with your submission. Please use the link provided."
 msgstr ""
-"Un problème s’est produit avec votre soumission. Veuillez utiliser le lien "
-"fourni."
 
 #: includes/class-step-delete-entry.php:22
 #: includes/class-step-delete-entry.php:32
@@ -144,7 +143,7 @@ msgstr "Entrée déplacée dans la corbeille."
 
 #: includes/class-step-delete-entry.php:182
 msgid "Scheduled entry for deletion on workflow completion."
-msgstr "Entrée planifiée pour suppression à la fin du flux de travail."
+msgstr "Entrée planifiée pour suppression à la fin du workflow."
 
 #: includes/class-step-form-submission.php:20
 #: includes/class-step-form-submission.php:36
@@ -249,7 +248,6 @@ msgstr "Mappage"
 #: includes/class-step-form-submission.php:101
 #: includes/class-step-new-entry.php:97 includes/class-step-new-entry.php:110
 #: includes/class-step-update-entry.php:159
-#: includes/class-step-update-fields.php:185
 msgid ""
 "Map the fields of this form to the selected form. Values from this form will"
 " be saved in the entry in the selected form"
@@ -448,6 +446,12 @@ msgid ""
 msgstr ""
 "Sélectionnez le champ qui contiendra l’ID de l’entrée depuis laquelle les "
 "valeurs seront copiées."
+
+#: includes/class-step-update-fields.php:185
+msgid ""
+"Map the fields of the selected form to this form. Values from the selected "
+"entry will be saved in the entry in this form."
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow Form Connector"

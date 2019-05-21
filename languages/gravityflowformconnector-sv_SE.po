@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-03-02 17:40:01+00:00\n"
+"POT-Creation-Date: 2019-05-12 18:34:09+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/gravityflow/teams/50678/sv_SE/)\n"
@@ -33,29 +33,30 @@ msgstr "Hantera inställningar"
 msgid "Uninstall"
 msgstr "Avinstallera"
 
-#: class-form-connector.php:354
+#: class-form-connector.php:367
 msgid "Submission received."
 msgstr "Inlämningen har tagits emot."
 
-#: class-form-connector.php:416 class-form-connector.php:426
+#: class-form-connector.php:433 class-form-connector.php:443
 msgid "The link to this form is no longer valid."
 msgstr "Länken till detta formulär är inte längre giltig."
 
-#: class-form-connector.php:465
+#: class-form-connector.php:482
 msgid "This form is no longer valid."
 msgstr "Detta formulär är inte längre giltigt."
 
-#: class-form-connector.php:476
+#: class-form-connector.php:493
 msgid "This form is no longer accepting submissions."
 msgstr "Detta formulär tar inte längre emot inskickad information."
 
-#: class-form-connector.php:486
+#: class-form-connector.php:510
 msgid "Your input is no longer required."
 msgstr "Det krävs inte längre någon inmatning från dig."
 
-#: class-form-connector.php:493
-msgid "There was a problem with you submission. Please use the link provided."
-msgstr "Ett problem inträffade med din inskickade information. Använd länken."
+#: class-form-connector.php:517
+msgid ""
+"There was a problem with your submission. Please use the link provided."
+msgstr ""
 
 #: includes/class-step-delete-entry.php:22
 #: includes/class-step-delete-entry.php:32
@@ -245,7 +246,6 @@ msgstr "Koppling"
 #: includes/class-step-form-submission.php:101
 #: includes/class-step-new-entry.php:97 includes/class-step-new-entry.php:110
 #: includes/class-step-update-entry.php:159
-#: includes/class-step-update-fields.php:185
 msgid ""
 "Map the fields of this form to the selected form. Values from this form will"
 " be saved in the entry in the selected form"
@@ -441,6 +441,12 @@ msgid ""
 msgstr ""
 "Markera fältet som innehåller post-ID för den post som värdena ska kopieras "
 "från."
+
+#: includes/class-step-update-fields.php:185
+msgid ""
+"Map the fields of the selected form to this form. Values from the selected "
+"entry will be saved in the entry in this form."
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow Form Connector"

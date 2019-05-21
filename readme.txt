@@ -1,7 +1,7 @@
 === Gravity Flow Form Connector Extension ===
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
-Requires at least: 4.0
+Requires at least: 4.4
 Tested up to: 5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -41,6 +41,10 @@ The Gravity Flow Form Connector Extension will work with any license of [Gravity
 
 
 == ChangeLog ==
+
+= 1.7.1 =
+- Fixed an issue with the form submission step when the target page contains the submit shortcode. Requires Gravity Flow 2.5.4.
+- Updated translations.
 
 = 1.7 =
 - Updated help text on Update Fields step settings screen.
