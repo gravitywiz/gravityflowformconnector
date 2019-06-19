@@ -20,4 +20,4 @@ tests/_output/*
 .env
 tests/acceptance-tests/_support/_generated/AcceptanceTesterActions.php
 codeclimate-report.html
-
+\.idea/
