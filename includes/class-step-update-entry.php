@@ -280,6 +280,11 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				return true;
 			}
 
+			if ( $target_form_id !== $target_entry['form_id'] ) {
+				$this->log_debug( __METHOD__ . '(): The form of selected entry does not match step settings expected form. No updates performed.' );
+				return true;
+			}
+
 			$new_entry = $this->do_mapping( $form, $entry );
 
 			$new_entry['form_id'] = $this->target_form_id;
@@ -372,11 +377,16 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				return true;
 			}
 
+			$target_entry = $this->get_remote_entry( $target_entry_id, $target_form_id, $entry, $form );
+
+			if ( $target_form_id !== $target_entry['form_id'] ) {
+				$this->log_debug( __METHOD__ . '(): The form of selected entry does not match step settings expected form. No updates performed.' );
+				return true;
+			}
+
 			switch ( $this->action ) {
 				case 'update':
 				case 'user_input':
-					$target_entry = $this->get_remote_entry( $target_entry_id, $target_form_id, $entry, $form );
-
 					foreach ( $new_entry as $key => $value ) {
 						$target_entry[ (string) $key ] = $value;
 					}
