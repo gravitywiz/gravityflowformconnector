@@ -32,6 +32,14 @@ $I->waitForText( 'We will get in touch with you shortly.', 3 );
 // Login to wp-admin
 $I->loginAsAdmin();
 
+// Ensure Submit page has published forms
+$I->amOnPage( '/wp-admin/admin.php?page=gravityflow_settings' );
+$I->waitForText( 'Published Workflow Forms', 3 );
+$I->checkOption( '#publish_form_5' );
+$I->checkOption( '#publish_form_6' );
+$I->click( [ 'css' => 'input[type=submit]' ]);
+$I->waitForText( 'Settings updated successfully', 3 );
+
 // Go to Status
 $I->amOnWorkflowPage( 'Status' );
 
@@ -89,6 +97,7 @@ $I->fillField( Locator::elementAt( 'input[name="input_17[]"]', 6 ), '321' );
 $I->click( [ 'css' => 'input[type=submit]' ]);
 
 $I->waitForText( 'We will get in touch with you shortly.', 3 );
+
 $I->closeTab();
 $I->reloadPage();
 $I->waitForText( 'Status: Complete', 3 );
