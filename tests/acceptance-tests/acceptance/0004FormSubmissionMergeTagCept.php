@@ -20,6 +20,7 @@ $I->checkOption( '#publish_form_4' );
 $I->checkOption( '#publish_form_5' );
 $I->checkOption( '#publish_form_6' );
 $I->checkOption( '#publish_form_7' );
+$I->checkOption( '#publish_form_8' );
 $I->checkOption( '#publish_form_9' );
 $I->checkOption( '#publish_form_10' );
 $I->checkOption( '#publish_form_11' );
