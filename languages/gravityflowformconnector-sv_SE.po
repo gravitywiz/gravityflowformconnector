@@ -1,15 +1,15 @@
-# Copyright 2015-2018 Steven Henty.
+# Copyright 2015-2019 Steven Henty.
 # Translators:
-# Tor-Bjorn Fjellner, 2017
-# FX Bénard <fxb@wp-translations.org>, 2018
+# Tor-Bjorn Fjellner, 2019
+# FX Bénard <fxb@wp-translations.org>, 2019
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2018-09-29 09:28:49+00:00\n"
+"POT-Creation-Date: 2019-05-12 18:34:09+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
-"Last-Translator: FX Bénard <fxb@wp-translations.org>, 2018\n"
+"Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: Swedish (Sweden) (https://www.transifex.com/gravityflow/teams/50678/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,85 +33,93 @@ msgstr "Hantera inställningar"
 msgid "Uninstall"
 msgstr "Avinstallera"
 
-#: class-form-connector.php:354
+#: class-form-connector.php:367
 msgid "Submission received."
 msgstr "Inlämningen har tagits emot."
 
-#: class-form-connector.php:416 class-form-connector.php:426
+#: class-form-connector.php:433 class-form-connector.php:443
 msgid "The link to this form is no longer valid."
 msgstr "Länken till detta formulär är inte längre giltig."
 
-#: class-form-connector.php:465
+#: class-form-connector.php:482
 msgid "This form is no longer valid."
 msgstr "Detta formulär är inte längre giltigt."
 
-#: class-form-connector.php:476
+#: class-form-connector.php:493
 msgid "This form is no longer accepting submissions."
 msgstr "Detta formulär tar inte längre emot inskickad information."
 
-#: class-form-connector.php:486
+#: class-form-connector.php:510
 msgid "Your input is no longer required."
 msgstr "Det krävs inte längre någon inmatning från dig."
 
-#: class-form-connector.php:493
-msgid "There was a problem with you submission. Please use the link provided."
-msgstr "Ett problem inträffade med din inskickade information. Använd länken."
+#: class-form-connector.php:517
+msgid ""
+"There was a problem with your submission. Please use the link provided."
+msgstr ""
 
 #: includes/class-step-delete-entry.php:22
 #: includes/class-step-delete-entry.php:32
 msgid "Delete an Entry"
-msgstr ""
+msgstr "Ta bort en post"
 
 #: includes/class-step-delete-entry.php:36
 #: includes/class-step-new-entry.php:37
 #: includes/class-step-update-entry.php:46
+#: includes/class-step-update-fields.php:49
 msgid "Site"
 msgstr "Webbplats"
 
 #: includes/class-step-delete-entry.php:42
 #: includes/class-step-new-entry.php:43
 #: includes/class-step-update-entry.php:52
+#: includes/class-step-update-fields.php:55
 msgid "This site"
 msgstr "Denna webbplats"
 
 #: includes/class-step-delete-entry.php:44
 #: includes/class-step-new-entry.php:44
 #: includes/class-step-update-entry.php:53
+#: includes/class-step-update-fields.php:56
 msgid "A different site"
 msgstr "En annan webbplats"
 
 #: includes/class-step-delete-entry.php:51
 #: includes/class-step-new-entry.php:49
 #: includes/class-step-update-entry.php:58
+#: includes/class-step-update-fields.php:61
 msgid "Site Url"
 msgstr "Webbplats-URL"
 
 #: includes/class-step-delete-entry.php:60
 #: includes/class-step-new-entry.php:58
 #: includes/class-step-update-entry.php:67
+#: includes/class-step-update-fields.php:70
 msgid "Public Key"
 msgstr "Publik nyckel"
 
 #: includes/class-step-delete-entry.php:69
 #: includes/class-step-new-entry.php:67
 #: includes/class-step-update-entry.php:76
+#: includes/class-step-update-fields.php:79
 msgid "Private Key"
 msgstr "Privat nyckel"
 
 #: includes/class-step-delete-entry.php:78
 msgid "Delete Action"
-msgstr ""
+msgstr "Ta bort åtgärden"
 
 #: includes/class-step-delete-entry.php:84
 msgid "Permanently delete the entry"
-msgstr ""
+msgstr "Ta bort denna post permanent"
 
 #: includes/class-step-delete-entry.php:88
 msgid "Move the entry to the trash"
-msgstr ""
+msgstr "Lägg posten i papperskorgen"
 
 #: includes/class-step-delete-entry.php:102
 #: includes/class-step-update-entry.php:104
+#: includes/class-step-update-fields.php:138
 msgid "Entry ID Field"
 msgstr "ID-fält för ärende"
 
@@ -120,44 +128,40 @@ msgid ""
 "Select the field which will contain the entry ID of the entry that will be "
 "deleted. This is used to lookup the entry so it can be deleted."
 msgstr ""
+"Markera det fält som innehåller post-ID för posten som ska tas bort. Detta "
+"används för att hitta posten så att den kan tas bort."
 
 #: includes/class-step-delete-entry.php:123
-#: includes/class-step-update-entry.php:128
+#: includes/class-step-update-entry.php:131
+#: includes/class-step-update-fields.php:165
 msgid "Entry ID (Self)"
 msgstr "Ärende-ID (eget)"
 
 #: includes/class-step-delete-entry.php:177
 msgid "Moved entry to the trash."
-msgstr ""
+msgstr "Posten har lagts i papperskorgen."
 
 #: includes/class-step-delete-entry.php:182
 msgid "Scheduled entry for deletion on workflow completion."
-msgstr ""
+msgstr "Posten har schemalagts för att tas bort när arbetsflödet är klart."
 
 #: includes/class-step-form-submission.php:20
-#: includes/class-step-form-submission.php:43
+#: includes/class-step-form-submission.php:36
 msgid "Form Submission"
 msgstr "Inskickande av formulär"
 
 #: includes/class-step-form-submission.php:28
 #: includes/class-step-new-entry.php:26
 #: includes/class-step-update-entry.php:32
+#: includes/class-step-update-fields.php:32
 msgid "Select a Form"
 msgstr "Välj ett formulär"
 
-#: includes/class-step-form-submission.php:36
-msgid "Select"
-msgstr "Välj"
-
-#: includes/class-step-form-submission.php:37
-msgid "Conditional Routing"
-msgstr "Villkorad dirigering"
-
-#: includes/class-step-form-submission.php:51
+#: includes/class-step-form-submission.php:44
 msgid "Assignee Policy"
 msgstr "Policy för val av ansvariga"
 
-#: includes/class-step-form-submission.php:52
+#: includes/class-step-form-submission.php:45
 msgid ""
 "Define how this step should be processed. If all assignees must complete "
 "this step then the entry will require input from every assignee before the "
@@ -169,34 +173,34 @@ msgstr ""
 "innan steget kan avslutas. Om ansvaret för steget vilar på en roll räcker "
 "det med att någon användare i aktuell roll avslutar steget."
 
-#: includes/class-step-form-submission.php:57
+#: includes/class-step-form-submission.php:50
 msgid "At least one assignee must complete this step"
 msgstr "Minst en ansvarig person måste utföra detta steg"
 
-#: includes/class-step-form-submission.php:61
+#: includes/class-step-form-submission.php:54
 msgid "All assignees must complete this step"
 msgstr "Alla ansvariga personer måste avsluta detta steg"
 
-#: includes/class-step-form-submission.php:70
+#: includes/class-step-form-submission.php:63
 msgid "Assignee email"
 msgstr "E-postadress till ansvarig person"
 
-#: includes/class-step-form-submission.php:74
+#: includes/class-step-form-submission.php:67
 msgid "Please submit the following form: {workflow_form_submission_link}"
 msgstr "Vänligen skicka in följande formulär: {workflow_form_submission_link}"
 
-#: includes/class-step-form-submission.php:80
+#: includes/class-step-form-submission.php:73
 #: includes/class-step-new-entry.php:76
 #: includes/class-step-update-entry.php:85
 msgid "Form"
 msgstr "Formulär"
 
-#: includes/class-step-form-submission.php:81
+#: includes/class-step-form-submission.php:74
 msgid "Select the form to be used for this form submission step."
 msgstr ""
 "Välj vilket formulär som ska användas för detta formulärinskickningssteg."
 
-#: includes/class-step-form-submission.php:88
+#: includes/class-step-form-submission.php:81
 msgid ""
 "Select the page to be used for the form submission. This can be the Workflow"
 " Submit Page in the WordPress Admin Dashboard or you can choose a page with "
@@ -207,37 +211,41 @@ msgstr ""
 "välja en sida som innehåller en kortkod för Gravity Flow-inskickning eller "
 "en kortkod för Gravity Forms."
 
-#: includes/class-step-form-submission.php:89
+#: includes/class-step-form-submission.php:82
 msgid "Submission Page"
 msgstr "Inskickningssida"
 
-#: includes/class-step-form-submission.php:100
+#: includes/class-step-form-submission.php:93
 #: includes/class-step-new-entry.php:88 includes/class-step-new-entry.php:106
-#: includes/class-step-update-entry.php:148
+#: includes/class-step-update-entry.php:151
+#: includes/class-step-update-fields.php:177
 msgid "Field Mapping"
 msgstr "Fältkoppling"
 
-#: includes/class-step-form-submission.php:104
+#: includes/class-step-form-submission.php:97
 #: includes/class-step-new-entry.php:93
-#: includes/class-step-update-entry.php:152
+#: includes/class-step-update-entry.php:155
+#: includes/class-step-update-fields.php:181
 msgid "Field"
 msgstr "Fält"
 
-#: includes/class-step-form-submission.php:105
+#: includes/class-step-form-submission.php:98
 #: includes/class-step-new-entry.php:94
-#: includes/class-step-update-entry.php:153
+#: includes/class-step-update-entry.php:156
+#: includes/class-step-update-fields.php:182
 msgid "Value"
 msgstr "Värde"
 
-#: includes/class-step-form-submission.php:108
+#: includes/class-step-form-submission.php:101
 #: includes/class-step-new-entry.php:97 includes/class-step-new-entry.php:110
-#: includes/class-step-update-entry.php:156
+#: includes/class-step-update-entry.php:159
+#: includes/class-step-update-fields.php:185
 msgid "Mapping"
 msgstr "Koppling"
 
-#: includes/class-step-form-submission.php:108
+#: includes/class-step-form-submission.php:101
 #: includes/class-step-new-entry.php:97 includes/class-step-new-entry.php:110
-#: includes/class-step-update-entry.php:156
+#: includes/class-step-update-entry.php:159
 msgid ""
 "Map the fields of this form to the selected form. Values from this form will"
 " be saved in the entry in the selected form"
@@ -245,91 +253,91 @@ msgstr ""
 "Koppla fälten i detta formulär till valt formulär. Värdena i detta formulär "
 "kommer att sparas i ärendet i valt formulär"
 
-#: includes/class-step-form-submission.php:159
+#: includes/class-step-form-submission.php:152
 msgid "Pending."
 msgstr "Väntar."
 
-#: includes/class-step-form-submission.php:205
+#: includes/class-step-form-submission.php:198
 #: includes/class-step-new-entry.php:382
 msgid "Select a Field"
 msgstr "Välj ett fält"
 
-#: includes/class-step-form-submission.php:212
+#: includes/class-step-form-submission.php:205
 #: includes/class-step-new-entry.php:389
 msgid "Select a %s Field"
 msgstr "Välj ett %s-fält"
 
-#: includes/class-step-form-submission.php:220
+#: includes/class-step-form-submission.php:213
 #: includes/class-step-new-entry.php:397
 msgid "Entry ID"
 msgstr "Ärende-ID"
 
-#: includes/class-step-form-submission.php:221
+#: includes/class-step-form-submission.php:214
 #: includes/class-step-new-entry.php:398
 msgid "Entry Date"
 msgstr "Ärendets datum"
 
-#: includes/class-step-form-submission.php:222
+#: includes/class-step-form-submission.php:215
 #: includes/class-step-new-entry.php:399
 msgid "User IP"
 msgstr "Användarens IP-adress"
 
-#: includes/class-step-form-submission.php:223
+#: includes/class-step-form-submission.php:216
 #: includes/class-step-new-entry.php:400
 msgid "Source Url"
 msgstr "URL för källa"
 
-#: includes/class-step-form-submission.php:224
+#: includes/class-step-form-submission.php:217
 #: includes/class-step-new-entry.php:401
 msgid "Created By"
 msgstr "Skapad av"
 
+#: includes/class-step-form-submission.php:254
 #: includes/class-step-form-submission.php:261
-#: includes/class-step-form-submission.php:268
-#: includes/class-step-form-submission.php:288
+#: includes/class-step-form-submission.php:281
 #: includes/class-step-new-entry.php:439 includes/class-step-new-entry.php:446
 msgid "Full"
 msgstr "Fullständig"
 
-#: includes/class-step-form-submission.php:275
+#: includes/class-step-form-submission.php:268
 #: includes/class-step-new-entry.php:453
 msgid "Selected"
 msgstr "Utvalt"
 
-#: includes/class-step-form-submission.php:530
+#: includes/class-step-form-submission.php:523
 msgid "Open Form"
 msgstr "Öppna formulär"
 
-#: includes/class-step-form-submission.php:585
+#: includes/class-step-form-submission.php:578
 msgid "User"
 msgstr "Användare"
 
-#: includes/class-step-form-submission.php:589
+#: includes/class-step-form-submission.php:582
 msgid "Email"
 msgstr "E-post"
 
-#: includes/class-step-form-submission.php:593
+#: includes/class-step-form-submission.php:586
 msgid "Role"
 msgstr "Roll"
 
-#: includes/class-step-form-submission.php:610
+#: includes/class-step-form-submission.php:603
 msgid "Pending Submission"
 msgstr "Väntar på inskickning"
 
-#: includes/class-step-form-submission.php:614
+#: includes/class-step-form-submission.php:607
 msgid "Complete"
 msgstr "Färdigt"
 
-#: includes/class-step-form-submission.php:616
+#: includes/class-step-form-submission.php:609
 msgid "Queued"
 msgstr "Lagt i kö"
 
-#: includes/class-step-form-submission.php:657
+#: includes/class-step-form-submission.php:650
 msgid "Default - WordPress Admin Dashboard: Workflow Submit Page"
 msgstr ""
 "Standard – WordPress administrationspanel: Inskickningssida för arbetsflöde"
 
-#: includes/class-step-form-submission.php:726
+#: includes/class-step-form-submission.php:719
 msgid "Processed"
 msgstr "Har behandlats"
 
@@ -351,11 +359,12 @@ msgstr "Har bearbetats."
 
 #: includes/class-step-update-entry.php:20
 #: includes/class-step-update-entry.php:42
-#: includes/class-step-update-entry.php:203
+#: includes/class-step-update-entry.php:206
 msgid "Update an Entry"
 msgstr "Uppdatera ett ärende"
 
 #: includes/class-step-update-entry.php:92
+#: includes/class-step-update-fields.php:95
 msgid "Action"
 msgstr "Åtgärd"
 
@@ -367,30 +376,77 @@ msgstr ""
 "Välj vilket fält som kommer att innehålla ärendets ID för ärendet som ska "
 "uppdateras. Detta används för att hitta ärendet så att det kan uppdateras."
 
-#: includes/class-step-update-entry.php:138
+#: includes/class-step-update-entry.php:141
 msgid "Approval Status Field"
 msgstr "Fält för godkännandestatus"
 
-#: includes/class-step-update-entry.php:176
-#: includes/class-step-update-entry.php:186
+#: includes/class-step-update-entry.php:179
+#: includes/class-step-update-entry.php:189
 msgid "Assignee"
 msgstr "Ansvarig"
 
-#: includes/class-step-update-entry.php:241
+#: includes/class-step-update-entry.php:244
 msgid "Approval"
 msgstr "Godkännande"
 
-#: includes/class-step-update-entry.php:244
+#: includes/class-step-update-entry.php:247
 msgid "User Input"
 msgstr "Användarinmatning"
 
-#: includes/class-step-update-entry.php:504
+#: includes/class-step-update-entry.php:737
 msgid "Select an assignee"
 msgstr "Välj en ansvarig"
 
-#: includes/class-step-update-entry.php:510
+#: includes/class-step-update-entry.php:743
 msgid "User (created_by)"
 msgstr "Användare (created_by)"
+
+#: includes/class-step-update-fields.php:20
+msgid "Update Fields"
+msgstr "Uppdatera fält"
+
+#: includes/class-step-update-fields.php:45
+#: includes/class-step-update-fields.php:205
+msgid "Update Field Values"
+msgstr "Uppdatera fältvärden"
+
+#: includes/class-step-update-fields.php:88
+msgid "Source Form"
+msgstr "Källformulär"
+
+#: includes/class-step-update-fields.php:104
+msgid "Entry Lookup"
+msgstr "Sökning efter post"
+
+#: includes/class-step-update-fields.php:110
+msgid "Conditional Logic"
+msgstr "Villkorslogik"
+
+#: includes/class-step-update-fields.php:111
+msgid "Select a field containing the source entry ID."
+msgstr "Välj ett fält som innehåller källpostens ID."
+
+#: includes/class-step-update-fields.php:122
+msgid "Lookup Conditional Logic"
+msgstr "Villkorsstyrd logik för sökning"
+
+#: includes/class-step-update-fields.php:124
+msgid "Look up the first entry matching {0} of the following criteria:"
+msgstr "Leta upp första posten som matchar {0} av följande kriterier:"
+
+#: includes/class-step-update-fields.php:140
+msgid ""
+"Select the field which will contain the entry ID of the entry that values "
+"will be copied from."
+msgstr ""
+"Markera fältet som innehåller post-ID för den post som värdena ska kopieras "
+"från."
+
+#: includes/class-step-update-fields.php:185
+msgid ""
+"Map the fields of the selected form to this form. Values from the selected "
+"entry will be saved in the entry in this form."
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow Form Connector"

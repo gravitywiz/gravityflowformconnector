@@ -1,12 +1,9 @@
-sudo: false
 dist: trusty
 language: php
 cache:
   directories:
-    - node_modules
+  - node_modules
 php:
-  - 5.4
-  - 5.5
   - 5.6
   - 7.0
   - 7.1
@@ -14,21 +11,22 @@ matrix:
   include:
     - php: 5.2
       dist: precise
+      env: WP_VERSION=5.1 WP_MULTISITE=0
     - php: 5.3
       dist: precise
+      env: WP_VERSION=5.1 WP_MULTISITE=0
     - php: 7.2
+    - php: 7.3
 env:
   matrix:
     - WP_VERSION=latest WP_MULTISITE=0
-    - WP_VERSION=4.9 WP_MULTISITE=0
+    - WP_VERSION=5.1 WP_MULTISITE=0
+    - WP_VERSION=5.0 WP_MULTISITE=0
     - WP_VERSION=4.8 WP_MULTISITE=0
     - WP_VERSION=4.7 WP_MULTISITE=0
-    - WP_VERSION=4.6 WP_MULTISITE=0
     - WP_VERSION=4.5 WP_MULTISITE=0
-    - WP_VERSION=4.4 WP_MULTISITE=0
-    - WP_VERSION=4.3 WP_MULTISITE=0
   global:
-    - WP_TRAVISCI=travis:phpunit
+  - WP_TRAVISCI=travis:phpunit
 before_script:
 - |
   # Remove Xdebug for a huge performance increase, but not from nightly or hhvm:
@@ -46,7 +44,7 @@ before_script:
   # Install the specified version of PHPUnit depending on the PHP version:
   if [[ "$WP_TRAVISCI" == "travis:phpunit" ]]; then
     case "$TRAVIS_PHP_VERSION" in
-      7.2)
+      7.2|7.3)
         echo "Using PHPUnit 6.0"
         composer global require "phpunit/phpunit=6.0.*"
         ;;
@@ -96,10 +94,4 @@ before_script:
 script: phpunit
 notifications:
   slack:
-    on_start: never
-    on_failure: always
-    on_success: change
-    secure: RrZ3tDCpJ4G/VmiKVgnAKaPM9vkbrq0c2Qhyxbrg6dMBQEIBzJZJnimq0VuJWzJSjtmGgQmbU8Dg54TEVNIU7zZAi2/9M1CQLRY+dH3PWBjv55+YDtXQRXiChnnR8C47dW9QPV/9EgJ2ksy7K4gIDTuhzNdVjBdPjU4xk4c2Y5sfS7F3EaWw16hXCcIL2PsksUFAtdtaCPpC/JSPS6hjQWc2Uxr4iBeVW8aZW06F9guAF12Dsp9voVZUnUZDso/aCfoqC5QPLu1G5WbYDzL+Fd0ph7W5RHP+koMW+cuFQIj6Fl0A8CfILJWhp+REQx1rxTHJgJ77oNuefv3xwcD7U6NNp1zuKYAQaJAlPYMv+rHngB1zwYdcL/VMg5k4KUUMsG3b/mN+yuW9HYfgNlYAUriE+HKECBdphCfOx5PhG0IXIfa3yVP92sH0Yo7CCQRBwfYKatLDAsTarTBAq/yFSGbeI8ivUBLp9tpG6/mxgkngPuSMtODyCm4EPC+0CuCm//ta+xOGNxxZ8Q+Rg+X7q/vlz6ygC7IMKFa7TKlCeA9dGwro9My8Os8TVBdqwjhBiIY/kMDwCNis1M4bHd7Yds2HfCq4CRJJln6+N9mEC+jjxKmtL3dB+/yWT6Hjkk9Qa4FtDHe1Dk6E7cfBDQjdKJLpNydJPxuazbInvURYnOc=
-  webhooks:
-    urls:
-      secure: gEfRUPngUkfJIke6ZBxED14AHlcDLoKyX+j7UJR9hHWiI9ydoBVU7X+td8sgx0oBgckDvbXdHgZl+LR7ftV5CIAhyeWTgJPny5+YsECU3+SSnL6NvwL3SGGavhhgt495NkW0fyvW2m92TqBSgcQMnDkd7Klxb+7euxOIwEKsVtVWd0UAQgr2Pkg4T35ZHtvqPFsIOdOqUB8l93H6cTl4Z1/bHHlPKWKaGMNkGca/VEP/+NIyi2uYVqcbsGR439vvOw/tJI+pn6202K0glPF7zZDjCvzZ4litSgzHh3n6C4qOciVFqvCWmC2JSFVfii5ZhrLORsvHRmph7iuiXvsrdJ+U/RydB1kP5K0ONGf9NR79ulLT07s+FNd4tRO+YHjfKtPfxpbkRMQG7IMyay2tym2cI55nw2Zm3xkgXmU33NHNczDbQujY+qs7vKnnFX4ExyPKUWFrKQMNaD3102kIf2O5jeyNOnLxokYu4yyC0thPenCsBwLysD0VLDG4Mu/Gw9kVLp7BtR4tBqzRzwf0fcXMpkmuzQlaCExJScwyk6TwpFvW/GQ4DIKAHVFagMNme2Ka3piQG88mJJuGDqcFMiWsvyBVGPb24U0SvALB8EWcceWVyJ7QDshjE1zkUjBnSTlaOzQbAxTf/19Ipd/rQnbN02mE90HN/2CV2AHlF9U=
+    secure: aog+yEHEsEAqOOgh50hPzRZl/2QjJcjzzpD1sQxDFo+RRrgTA/zX/Y0z0VdSqe316vcbzYnVLwNWf6l3xN/kNiCecJHxkm0/+nKxha1NL8TTwGcg9gv+GFoK47nZjU9aKSY6497v5cK0/wO5ohH2M61H/lf0oTEMXWklZngoEetW9jJa1jodSRhfONlvMbVQL5Em+m751ZYvLyJxRVVydYujUr/mKXxKwRGegFdU/kBDn6vqhpvflHG0eFa8d8hg4WZxxTpBQ95g/JDvDREygNyhR2M2ALywaW6O2AHxnOOAI4M1bL2xH4XdOBt7eC/hSWEPG7vm9a5j7/arRk7sLtEH44cV9uA0CqyeBPu8csmY9fof6UpZuchVp107//jKuOSdreFAgOvkB/bKE4TsU+FjbLDmHM5gFMZX+gRKJAeqoVB5zlRQJTU4lzFSURj67D+BlGbaQZMucDawdhn29UDnDcrT9OiD3JNllr4fTUGb2w8aSxnzmdQTvcjlC8tfGOy+GNgJLzpZ7MjndEIpBHcTM9p5jlhT0qk+tIaWsL4T69wwVrSiwnU9EqWlUwJrxBzKJ0YmeZt57x1nnQs6lH/Te5WHnP3BhruwM3eiYD/aMdXXgrtv1MTLVI/71Gi62JgEMZOq2kAy80bw4F7sdadiC+PSW+sGHjqEqeOROwA=

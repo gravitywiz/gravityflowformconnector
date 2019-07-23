@@ -92,7 +92,14 @@ function create_workflow_page( $page ) {
 	return $post_id ? $post_id : '';
 }
 
-function maybe_fix_imported_feed_settings( $submit_page_id ) {
+/**
+ * Swaps the form Title for the form ID and page ID for the target_form_id and submit_page settings of the Form Submission step.
+ *
+ * The JSON for the forms used in the Form Submission steps must replace the form_id with the Form title in order for
+ * Form Submission steps to work in the acceptance tests.
+ *
+ */
+function maybe_fix_imported_feed_settings() {
 	$feeds = gravity_flow()->get_feeds();
 	if ( ! empty( $feeds ) ) {
 		foreach ( $feeds as $feed ) {
@@ -104,16 +111,13 @@ function maybe_fix_imported_feed_settings( $submit_page_id ) {
 				$form_id = GFFormsModel::get_form_id( $target_form_id );
 				if ( $form_id ) {
 					$feed['meta']['target_form_id'] = $form_id;
+					if ( $feed['meta']['submit_page'] != 'admin' ) {
+						$submit_page = get_page_by_title( $target_form_id );
+						$feed['meta']['submit_page'] = $submit_page->ID;
+					}
 
 					$dirty = true;
 				}
-			}
-
-			$submit_page = rgars( $feed, 'meta/submit_page' );
-			if ( $submit_page && $submit_page != 'admin' ) {
-				$feed['meta']['submit_page'] = $submit_page_id;
-
-				$dirty = true;
 			}
 
 			if ( $dirty ) {
@@ -124,4 +128,4 @@ function maybe_fix_imported_feed_settings( $submit_page_id ) {
 	}
 }
 
-maybe_fix_imported_feed_settings( $settings['submit_page'] );
+maybe_fix_imported_feed_settings();
