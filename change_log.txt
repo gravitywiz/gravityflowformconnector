@@ -1,0 +1,1 @@
+- Fixed an issue with hidden field values mapped with form submission step not being stored into child entry correctly.

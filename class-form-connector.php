@@ -622,6 +622,10 @@ if ( class_exists( 'GFForms' ) ) {
 				return $value;
 			}
 
+			if ( ! empty( $value ) ) {
+				return $value;
+			}
+
 			$form_id        = absint( $form['id'] );
 			$target_form_id = absint( $current_step->target_form_id );
 
