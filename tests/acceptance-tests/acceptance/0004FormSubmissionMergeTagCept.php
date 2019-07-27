@@ -7,6 +7,26 @@ $I = new AcceptanceTester( $scenario );
 
 $I->wantTo( 'Test the {workflow_form_submission_link} merge tag in the form confirmation message.' );
 
+// Login to wp-admin
+$I->loginAsAdmin();
+
+// Ensure Submit page has published forms
+$I->amOnPage( '/wp-admin/admin.php?page=gravityflow_settings' );
+$I->waitForText( 'Published Workflow Forms', 3 );
+$I->checkOption( '#publish_form_1' );
+$I->checkOption( '#publish_form_2' );
+$I->checkOption( '#publish_form_3' );
+$I->checkOption( '#publish_form_4' );
+$I->checkOption( '#publish_form_5' );
+$I->checkOption( '#publish_form_6' );
+$I->checkOption( '#publish_form_7' );
+$I->checkOption( '#publish_form_8' );
+$I->checkOption( '#publish_form_9' );
+$I->checkOption( '#publish_form_10' );
+$I->checkOption( '#publish_form_11' );
+$I->click( [ 'css' => 'input[type=submit]' ]);
+$I->waitForText( 'Settings updated successfully', 3 );
+
 // Make sure we're logged out
 $I->logOut();
 $I->resetCookie( 'gflow_access_token' );

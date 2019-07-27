@@ -16,7 +16,7 @@ $api_settings = update_option('gravityformsaddon_gravityformswebapi_settings', a
 	'impersonate_account' => 1,
 ) );
 
-$feed_steps = array( 34, 36, 41, 42 );
+$feed_steps = array( 37, 39, 44, 45 );
 
 foreach ( $feed_steps as $step_id ) {
 	$remote_step = GFAPI::get_feeds( $step_id, 11 );
