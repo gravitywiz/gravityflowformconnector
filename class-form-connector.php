@@ -94,7 +94,9 @@ if ( class_exists( 'GFForms' ) ) {
 			add_filter( 'gform_pre_render', array( $this, 'filter_gform_pre_render' ) );
 			add_filter( 'gform_validation', array( $this, 'filter_gform_validation' ) );
 			add_filter( 'gform_save_field_value', array( $this, 'filter_save_field_value' ), 10, 5 );
-			add_action( 'gform_after_submission', array( $this, 'action_gform_after_submission' ), 999, 2 );
+			// Stripe Checkout hook to `gform_after_submission` and set priority as 50. It will redirect users to
+			// an external checkout page so we must run `action_gform_after_submission()` before it. Set to 40.
+			add_action( 'gform_after_submission', array( $this, 'action_gform_after_submission' ), 40, 2 );
 
 			add_filter( 'gform_pre_replace_merge_tags', array( $this, 'filter_gform_pre_replace_merge_tags' ), 10, 7 );
 			add_filter( 'gform_post_payment_completed', array( $this, 'action_gform_post_payment_completed' ), 10, 3 );
