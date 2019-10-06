@@ -42,6 +42,11 @@ The Gravity Flow Form Connector Extension will work with any license of [Gravity
 
 == ChangeLog ==
 
+= 1.7.2 =
+- Fixed an issue where the form submission step cannot be released if the payment method set in the target form is Stripe Checkout (Stripe add-on > 3.0).
+- Fixed an issue with hidden field values mapped with form submission step not being stored into child entry correctly.
+- Fixed an issue with Update An Entry local/remote processing that prevents updates when the form of selected entry does not match step settings target form.
+
 = 1.7.1 =
 - Fixed an issue with the form submission step when the target page contains the submit shortcode. Requires Gravity Flow 2.5.4.
 - Updated translations.
