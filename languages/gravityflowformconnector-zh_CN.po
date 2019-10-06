@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-05-12 18:34:09+00:00\n"
+"POT-Creation-Date: 2019-05-21 11:14:23+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: Edi Weigh <michaeledi@163.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/gravityflow/teams/50678/zh_CN/)\n"
@@ -24,37 +24,42 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-form-connector.php:106
+#: class-form-connector.php:117
 msgid "Manage Settings"
 msgstr ""
 
-#: class-form-connector.php:107
+#: class-form-connector.php:118
 msgid "Uninstall"
 msgstr ""
 
-#: class-form-connector.php:367
+#: class-form-connector.php:380
 msgid "Submission received."
 msgstr "已收到提交项目。"
 
-#: class-form-connector.php:433 class-form-connector.php:443
+#: class-form-connector.php:446 class-form-connector.php:456
 msgid "The link to this form is no longer valid."
 msgstr "此表单链接已失效。"
 
-#: class-form-connector.php:482
+#: class-form-connector.php:495
 msgid "This form is no longer valid."
 msgstr "此表单已失效。"
 
-#: class-form-connector.php:493
+#: class-form-connector.php:506
 msgid "This form is no longer accepting submissions."
 msgstr "此表单已经不再接受新的项目提交。"
 
-#: class-form-connector.php:510
+#: class-form-connector.php:523
 msgid "Your input is no longer required."
 msgstr "您的输入不再是必需的。"
 
-#: class-form-connector.php:517
+#: class-form-connector.php:530
 msgid ""
 "There was a problem with your submission. Please use the link provided."
+msgstr ""
+
+#: class-form-connector.php:763 class-form-connector.php:772
+#: class-form-connector.php:783
+msgid "The link to this form is no longer valid"
 msgstr ""
 
 #: includes/class-step-delete-entry.php:22

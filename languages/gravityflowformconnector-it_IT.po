@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-05-12 18:34:09+00:00\n"
+"POT-Creation-Date: 2019-05-21 11:14:23+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/gravityflow/teams/50678/it_IT/)\n"
@@ -25,37 +25,42 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-form-connector.php:106
+#: class-form-connector.php:117
 msgid "Manage Settings"
 msgstr "Gestisci le impostazioni"
 
-#: class-form-connector.php:107
+#: class-form-connector.php:118
 msgid "Uninstall"
 msgstr "Disinstalla"
 
-#: class-form-connector.php:367
+#: class-form-connector.php:380
 msgid "Submission received."
 msgstr "Invio ricevuto."
 
-#: class-form-connector.php:433 class-form-connector.php:443
+#: class-form-connector.php:446 class-form-connector.php:456
 msgid "The link to this form is no longer valid."
 msgstr "Il link a questo modulo non è più valido."
 
-#: class-form-connector.php:482
+#: class-form-connector.php:495
 msgid "This form is no longer valid."
 msgstr "Questo modulo non è più valido."
 
-#: class-form-connector.php:493
+#: class-form-connector.php:506
 msgid "This form is no longer accepting submissions."
 msgstr "Questo modulo non accetta altri invii."
 
-#: class-form-connector.php:510
+#: class-form-connector.php:523
 msgid "Your input is no longer required."
 msgstr "Il tuo input non è più necessario."
 
-#: class-form-connector.php:517
+#: class-form-connector.php:530
 msgid ""
 "There was a problem with your submission. Please use the link provided."
+msgstr ""
+
+#: class-form-connector.php:763 class-form-connector.php:772
+#: class-form-connector.php:783
+msgid "The link to this form is no longer valid"
 msgstr ""
 
 #: includes/class-step-delete-entry.php:22
