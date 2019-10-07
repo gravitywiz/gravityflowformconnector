@@ -263,8 +263,8 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 			$api = new Gravity_Flow_API( $target_form_id );
 
 			$steps = $api->get_steps();
-
-			$form = $this->get_form();
+			
+			$form = apply_filters( 'gravityflowformconnector_source_form', $this->get_form(), $entry );
 
 			$target_entry_id = rgar( $entry, $this->update_entry_id );
 
