@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-05-21 11:14:23+00:00\n"
+"POT-Creation-Date: 2019-10-06 12:16:14+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: FX Bénard <fxb@wp-translations.org>, 2017\n"
 "Language-Team: Russian (Russia) (https://www.transifex.com/gravityflow/teams/50678/ru_RU/)\n"
@@ -24,41 +24,41 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
-#: class-form-connector.php:117
+#: class-form-connector.php:119
 msgid "Manage Settings"
 msgstr ""
 
-#: class-form-connector.php:118
+#: class-form-connector.php:120
 msgid "Uninstall"
 msgstr ""
 
-#: class-form-connector.php:380
+#: class-form-connector.php:382
 msgid "Submission received."
 msgstr ""
 
-#: class-form-connector.php:446 class-form-connector.php:456
+#: class-form-connector.php:448 class-form-connector.php:458
 msgid "The link to this form is no longer valid."
 msgstr ""
 
-#: class-form-connector.php:495
+#: class-form-connector.php:497
 msgid "This form is no longer valid."
 msgstr ""
 
-#: class-form-connector.php:506
+#: class-form-connector.php:508
 msgid "This form is no longer accepting submissions."
 msgstr ""
 
-#: class-form-connector.php:523
+#: class-form-connector.php:525
 msgid "Your input is no longer required."
 msgstr ""
 
-#: class-form-connector.php:530
+#: class-form-connector.php:532
 msgid ""
 "There was a problem with your submission. Please use the link provided."
 msgstr ""
 
-#: class-form-connector.php:763 class-form-connector.php:772
-#: class-form-connector.php:783
+#: class-form-connector.php:769 class-form-connector.php:778
+#: class-form-connector.php:789
 msgid "The link to this form is no longer valid"
 msgstr ""
 
@@ -385,11 +385,11 @@ msgstr "Утверждение"
 msgid "User Input"
 msgstr "Ввод данных пользователем"
 
-#: includes/class-step-update-entry.php:737
+#: includes/class-step-update-entry.php:747
 msgid "Select an assignee"
 msgstr ""
 
-#: includes/class-step-update-entry.php:743
+#: includes/class-step-update-entry.php:753
 msgid "User (created_by)"
 msgstr ""
 
