@@ -1,0 +1,1 @@
+- Added gravityflowformconnector_update_entry_form filter which allows the form of entry for update to be customized/hydrated.
