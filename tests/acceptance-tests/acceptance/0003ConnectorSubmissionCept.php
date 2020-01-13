@@ -25,7 +25,7 @@ $I->fillField( Locator::elementAt( 'input[name="input_17[]"]', 6 ), '789' );
 $I->attachFile( 'input[name=input_23]', 'gravityflow-logo.png' );
 $I->selectOption( 'select[name="input_31[]"]', array( 'admin1 admin1', 'admin2 admin2', 'admin3 admin3' ) );
 
-$I->click( [ 'css' => 'input[type=submit]' ]);
+$I->click( 'Submit' );
 
 $I->waitForText( 'We will get in touch with you shortly.', 3 );
 
@@ -37,7 +37,7 @@ $I->amOnPage( '/wp-admin/admin.php?page=gravityflow_settings' );
 $I->waitForText( 'Published Workflow Forms', 3 );
 $I->checkOption( '#publish_form_5' );
 $I->checkOption( '#publish_form_6' );
-$I->click( [ 'css' => 'input[type=submit]' ]);
+$I->click( 'Update Settings' );
 $I->waitForText( 'Settings updated successfully', 3 );
 
 // Go to Status
@@ -94,7 +94,7 @@ $I->fillField( Locator::elementAt( 'input[name="input_17[]"]', 4 ), '987' );
 $I->fillField( Locator::elementAt( 'input[name="input_17[]"]', 5 ), '654' );
 $I->fillField( Locator::elementAt( 'input[name="input_17[]"]', 6 ), '321' );
 
-$I->click( [ 'css' => 'input[type=submit]' ]);
+$I->click( 'Submit' );
 
 $I->waitForText( 'We will get in touch with you shortly.', 3 );
 
@@ -124,4 +124,4 @@ $I->see( '654',                                  '//table[1]/tbody/tr[32]/td' );
 $I->see( '321',                                  '//table[1]/tbody/tr[32]/td' );
 
 $I->waitForElement( 'button[value=approved]', 3 );
-$I->click( 'button[value=approved]' );
+$I->click( 'Approve' );

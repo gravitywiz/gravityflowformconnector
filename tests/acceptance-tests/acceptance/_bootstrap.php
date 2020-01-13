@@ -65,6 +65,23 @@ function tests_create_testing_users() {
 
 tests_create_testing_users();
 
+function copy_to_dir( $pattern, $dir ) {
+	foreach ( glob( $pattern ) as $file ) {
+		if ( ! is_dir( $file ) && is_readable( $file ) ) {
+			$dest = realpath( $dir ) . DIRECTORY_SEPARATOR . basename( $file );
+			copy( $file, $dest );
+		}
+	}
+}
+
+if ( ! is_dir( WPMU_PLUGIN_DIR ) ) {
+	mkdir( WPMU_PLUGIN_DIR );
+};
+
+
+echo "\nCopying mu plugins to " . WP_CONTENT_DIR . '/mu-plugins';
+copy_to_dir( dirname( dirname( __FILE__ ) ) . '/_mu-plugins/*.php', WPMU_PLUGIN_DIR );
+
 $settings                = gravity_flow()->get_app_settings();
 $settings['inbox_page']  = create_workflow_page( 'inbox' );
 $settings['status_page'] = create_workflow_page( 'status' );

@@ -1,1 +1,2 @@
 - Added gravityflowformconnector_update_entry_form filter which allows the form of entry for update to be customized/hydrated.
+- Fixed the TwentyTwenty default theme in WP 5.3 fails acceptance tests.
