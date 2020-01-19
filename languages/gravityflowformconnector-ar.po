@@ -1,6 +1,6 @@
 # Copyright 2015-2019 Steven Henty.
 # Translators:
-# Edi Weigh <michaeledi@163.com>, 2017
+# FX Bénard <fxb@wp-translations.org>, 2019
 # 
 msgid ""
 msgstr ""
@@ -8,13 +8,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
 "POT-Creation-Date: 2019-10-12 14:13:46+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
-"Last-Translator: Edi Weigh <michaeledi@163.com>, 2017\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/gravityflow/teams/50678/zh_CN/)\n"
+"Last-Translator: FX Bénard <fxb@wp-translations.org>, 2019\n"
+"Language-Team: Arabic (https://www.transifex.com/gravityflow/teams/50678/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: grunt-wp-i18n1.0.2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-Bookmarks: \n"
@@ -26,142 +26,144 @@ msgstr ""
 
 #: class-form-connector.php:119
 msgid "Manage Settings"
-msgstr ""
+msgstr "إدارة الإعدادات"
 
 #: class-form-connector.php:120
 msgid "Uninstall"
-msgstr ""
+msgstr "إلغاء التثبيت"
 
 #: class-form-connector.php:382
 msgid "Submission received."
-msgstr "已收到提交项目。"
+msgstr "تم استلام الإرسال."
 
 #: class-form-connector.php:448 class-form-connector.php:458
 msgid "The link to this form is no longer valid."
-msgstr "此表单链接已失效。"
+msgstr "لم يعد الرابط إلى هذا النموذج صالحًا."
 
 #: class-form-connector.php:497
 msgid "This form is no longer valid."
-msgstr "此表单已失效。"
+msgstr "هذا النموذج لم يعد صالحا."
 
 #: class-form-connector.php:508
 msgid "This form is no longer accepting submissions."
-msgstr "此表单已经不再接受新的项目提交。"
+msgstr "هذا النموذج لم يعد يقبل عمليات الإرسال."
 
 #: class-form-connector.php:525
 msgid "Your input is no longer required."
-msgstr "您的输入不再是必需的。"
+msgstr "المدخلات الخاصة بك لم تعد مطلوبة."
 
 #: class-form-connector.php:532
 msgid ""
 "There was a problem with your submission. Please use the link provided."
-msgstr ""
+msgstr "حدثت مشكلة في عملية الإرسال. يرجى استخدام الرابط المتوفر."
 
 #: class-form-connector.php:769 class-form-connector.php:778
 #: class-form-connector.php:789
 msgid "The link to this form is no longer valid"
-msgstr ""
+msgstr "لم يعد الرابط إلى هذا النموذج صالحًا"
 
 #: includes/class-step-delete-entry.php:22
 #: includes/class-step-delete-entry.php:32
 msgid "Delete an Entry"
-msgstr ""
+msgstr "حذف إدخال"
 
 #: includes/class-step-delete-entry.php:36
 #: includes/class-step-new-entry.php:37
 #: includes/class-step-update-entry.php:46
 #: includes/class-step-update-fields.php:49
 msgid "Site"
-msgstr "站点"
+msgstr "موقع"
 
 #: includes/class-step-delete-entry.php:42
 #: includes/class-step-new-entry.php:43
 #: includes/class-step-update-entry.php:52
 #: includes/class-step-update-fields.php:55
 msgid "This site"
-msgstr "此站点"
+msgstr "هذا الموقع"
 
 #: includes/class-step-delete-entry.php:44
 #: includes/class-step-new-entry.php:44
 #: includes/class-step-update-entry.php:53
 #: includes/class-step-update-fields.php:56
 msgid "A different site"
-msgstr "其他站点"
+msgstr "موقع مختلف"
 
 #: includes/class-step-delete-entry.php:51
 #: includes/class-step-new-entry.php:49
 #: includes/class-step-update-entry.php:58
 #: includes/class-step-update-fields.php:61
 msgid "Site Url"
-msgstr "网站URL"
+msgstr "رابط الموقع"
 
 #: includes/class-step-delete-entry.php:60
 #: includes/class-step-new-entry.php:58
 #: includes/class-step-update-entry.php:67
 #: includes/class-step-update-fields.php:70
 msgid "Public Key"
-msgstr "公共Key"
+msgstr "مفتاح عام"
 
 #: includes/class-step-delete-entry.php:69
 #: includes/class-step-new-entry.php:67
 #: includes/class-step-update-entry.php:76
 #: includes/class-step-update-fields.php:79
 msgid "Private Key"
-msgstr "私有Key"
+msgstr "مفتاح خاص"
 
 #: includes/class-step-delete-entry.php:78
 msgid "Delete Action"
-msgstr ""
+msgstr "حذف الإجراء"
 
 #: includes/class-step-delete-entry.php:84
 msgid "Permanently delete the entry"
-msgstr ""
+msgstr "احذف الإدخال نهائيًا"
 
 #: includes/class-step-delete-entry.php:88
 msgid "Move the entry to the trash"
-msgstr ""
+msgstr "نقل الإدخال إلى سلة المهملات"
 
 #: includes/class-step-delete-entry.php:102
 #: includes/class-step-update-entry.php:104
 #: includes/class-step-update-fields.php:138
 msgid "Entry ID Field"
-msgstr "条目ID字段"
+msgstr "حقل معرف الدخول"
 
 #: includes/class-step-delete-entry.php:104
 msgid ""
 "Select the field which will contain the entry ID of the entry that will be "
 "deleted. This is used to lookup the entry so it can be deleted."
 msgstr ""
+"حدد الحقل الذي سيحتوي على معرف إدخال الإدخال الذي سيتم حذفه. يستخدم هذا "
+"للبحث عن الإدخال حتى يمكن حذفه."
 
 #: includes/class-step-delete-entry.php:123
 #: includes/class-step-update-entry.php:131
 #: includes/class-step-update-fields.php:165
 msgid "Entry ID (Self)"
-msgstr "条目ID(自身)"
+msgstr "معرف الدخول (ذاتي)"
 
 #: includes/class-step-delete-entry.php:177
 msgid "Moved entry to the trash."
-msgstr ""
+msgstr "نقل الدخول إلى سلة المهملات."
 
 #: includes/class-step-delete-entry.php:182
 msgid "Scheduled entry for deletion on workflow completion."
-msgstr ""
+msgstr "إدخال مجدولة للحذف عند إكمال سير العمل."
 
 #: includes/class-step-form-submission.php:20
 #: includes/class-step-form-submission.php:36
 msgid "Form Submission"
-msgstr "表单提交"
+msgstr "إرسال النموذج"
 
 #: includes/class-step-form-submission.php:28
 #: includes/class-step-new-entry.php:26
 #: includes/class-step-update-entry.php:32
 #: includes/class-step-update-fields.php:32
 msgid "Select a Form"
-msgstr "请选择表单"
+msgstr "إختر نموذج"
 
 #: includes/class-step-form-submission.php:44
 msgid "Assignee Policy"
-msgstr "负责人指定规则"
+msgstr "سياسة الإحالة"
 
 #: includes/class-step-form-submission.php:45
 msgid ""
@@ -170,33 +172,36 @@ msgid ""
 "step can be completed. If the step is assigned to a role only one user in "
 "that role needs to complete the step."
 msgstr ""
-"定义该步骤如何操作。如果所有的负责人都必须完成这一步，那么在步骤完成之前，该条目将先要求每个负责人填写。如果该步骤被分配给一个角色，那么只需要一个属于该角色的用户来完成该步骤。"
+"حدد كيفية معالجة هذه الخطوة. وإذا كان يتعين على جميع المحال إليهم إكمال هذه "
+"الخطوة، فإن الإدخال سيتطلب مدخلات من كل المحال إليهم قبل إتمام الخطوة. إذا "
+"تم تعيين الخطوة إلى رتبه معينه, فسيتطلب مستخدم واحد فقط في هذا الرتبه لإكمال"
+" الخطوه."
 
 #: includes/class-step-form-submission.php:50
 msgid "At least one assignee must complete this step"
-msgstr "至少一个负责人必须完成此步骤"
+msgstr "يجب على معين له واحدًا على الأقل إكمال هذه الخطوة"
 
 #: includes/class-step-form-submission.php:54
 msgid "All assignees must complete this step"
-msgstr "所有的负责人必须完成这个步骤"
+msgstr "جميع المحال إليهم يجب عليهم إكمال هذه الخطوة"
 
 #: includes/class-step-form-submission.php:63
 msgid "Assignee email"
-msgstr "负责人邮箱"
+msgstr "البريد الإلكتروني المعين له"
 
 #: includes/class-step-form-submission.php:67
 msgid "Please submit the following form: {workflow_form_submission_link}"
-msgstr "请在下表中提交项目： {workflow_form_submission_link}"
+msgstr "يرجى إرسال النموذج التالي:        {workflow_form_submission_link}"
 
 #: includes/class-step-form-submission.php:73
 #: includes/class-step-new-entry.php:76
 #: includes/class-step-update-entry.php:85
 msgid "Form"
-msgstr "表单"
+msgstr "نموذج"
 
 #: includes/class-step-form-submission.php:74
 msgid "Select the form to be used for this form submission step."
-msgstr "选择此表单提交步骤所用的表单。"
+msgstr "حدد النموذج المراد استخدامه في خطوة إرسال النموذج هذه."
 
 #: includes/class-step-form-submission.php:81
 msgid ""
@@ -204,40 +209,41 @@ msgid ""
 " Submit Page in the WordPress Admin Dashboard or you can choose a page with "
 "either a Gravity Flow submit shortcode or a Gravity Forms shortcode."
 msgstr ""
-"选择要用于表单提交的页面。它可以位于 WordPress "
-"管理仪表板中的工作流提交页面，你也可以选择包含GravityForms/GravityFlow短代码的页面。"
+"حدد الصفحة المراد استخدامها لإرسال النموذج. يمكن أن تكون هي صفحة إرسال سير "
+"العمل (Workflow Submit Page) في لوحة تحكم مدير ووردبريس أو يمكنك اختيار صفحة"
+" بها إما كود قصير لإرسال Gravity Flow أو الكود القصير لGravity Forms."
 
 #: includes/class-step-form-submission.php:82
 msgid "Submission Page"
-msgstr "提交页面"
+msgstr "صفحة الإرسال "
 
 #: includes/class-step-form-submission.php:93
 #: includes/class-step-new-entry.php:88 includes/class-step-new-entry.php:106
 #: includes/class-step-update-entry.php:151
 #: includes/class-step-update-fields.php:177
 msgid "Field Mapping"
-msgstr "字段映射"
+msgstr "تعيين الحقل"
 
 #: includes/class-step-form-submission.php:97
 #: includes/class-step-new-entry.php:93
 #: includes/class-step-update-entry.php:155
 #: includes/class-step-update-fields.php:181
 msgid "Field"
-msgstr "字段"
+msgstr "حقل "
 
 #: includes/class-step-form-submission.php:98
 #: includes/class-step-new-entry.php:94
 #: includes/class-step-update-entry.php:156
 #: includes/class-step-update-fields.php:182
 msgid "Value"
-msgstr "值"
+msgstr "القيمه"
 
 #: includes/class-step-form-submission.php:101
 #: includes/class-step-new-entry.php:97 includes/class-step-new-entry.php:110
 #: includes/class-step-update-entry.php:159
 #: includes/class-step-update-fields.php:185
 msgid "Mapping"
-msgstr "映射"
+msgstr "إقتران"
 
 #: includes/class-step-form-submission.php:101
 #: includes/class-step-new-entry.php:97 includes/class-step-new-entry.php:110
@@ -245,210 +251,216 @@ msgstr "映射"
 msgid ""
 "Map the fields of this form to the selected form. Values from this form will"
 " be saved in the entry in the selected form"
-msgstr "将本表单的字段映射到指定表单。本表单的值将保存到选择的表单条目中。"
+msgstr ""
+"إقرن حقول هذا النموذج إلى النموذج المحدد. سيتم حفظ القيم من هذا النموذج في "
+"النموذج المحدد"
 
 #: includes/class-step-form-submission.php:152
 msgid "Pending."
-msgstr "待处理。"
+msgstr "بإنتظار المراجعة."
 
 #: includes/class-step-form-submission.php:198
 #: includes/class-step-new-entry.php:382
 msgid "Select a Field"
-msgstr "选择一个字段"
+msgstr "اختار الحقل"
 
 #: includes/class-step-form-submission.php:205
 #: includes/class-step-new-entry.php:389
 msgid "Select a %s Field"
-msgstr "选择一个 %s 字段"
+msgstr "اختار حقل %s"
 
 #: includes/class-step-form-submission.php:213
 #: includes/class-step-new-entry.php:397
 msgid "Entry ID"
-msgstr "条目 ID"
+msgstr "معرف الإدخال"
 
 #: includes/class-step-form-submission.php:214
 #: includes/class-step-new-entry.php:398
 msgid "Entry Date"
-msgstr "条目日期"
+msgstr "تاريخ المدخل"
 
 #: includes/class-step-form-submission.php:215
 #: includes/class-step-new-entry.php:399
 msgid "User IP"
-msgstr "用户 IP"
+msgstr "عنوان IP المستخدم"
 
 #: includes/class-step-form-submission.php:216
 #: includes/class-step-new-entry.php:400
 msgid "Source Url"
-msgstr "源URL"
+msgstr "مصدر العنوان URL"
 
 #: includes/class-step-form-submission.php:217
 #: includes/class-step-new-entry.php:401
 msgid "Created By"
-msgstr "创建者"
+msgstr "تم الإنشاء بواسطة"
 
 #: includes/class-step-form-submission.php:254
 #: includes/class-step-form-submission.php:261
 #: includes/class-step-form-submission.php:281
 #: includes/class-step-new-entry.php:439 includes/class-step-new-entry.php:446
 msgid "Full"
-msgstr "全部"
+msgstr "مليء"
 
 #: includes/class-step-form-submission.php:268
 #: includes/class-step-new-entry.php:453
 msgid "Selected"
-msgstr "已选择"
+msgstr "محدد"
 
 #: includes/class-step-form-submission.php:523
 msgid "Open Form"
-msgstr "打开表单"
+msgstr "فتح النموذج"
 
 #: includes/class-step-form-submission.php:578
 msgid "User"
-msgstr "用户"
+msgstr "المستخدم"
 
 #: includes/class-step-form-submission.php:582
 msgid "Email"
-msgstr "邮箱"
+msgstr "البريد الإلكتروني"
 
 #: includes/class-step-form-submission.php:586
 msgid "Role"
-msgstr "角色"
+msgstr "الرتبة"
 
 #: includes/class-step-form-submission.php:603
 msgid "Pending Submission"
-msgstr "等待提交"
+msgstr "الإرسال بإنتظار المراجعة"
 
 #: includes/class-step-form-submission.php:607
 msgid "Complete"
-msgstr "完成"
+msgstr "مكتمل"
 
 #: includes/class-step-form-submission.php:609
 msgid "Queued"
-msgstr "已队列"
+msgstr "في الانتظار"
 
 #: includes/class-step-form-submission.php:650
 msgid "Default - WordPress Admin Dashboard: Workflow Submit Page"
-msgstr "默认值 - WordPress 管理仪表板︰ 工作流提交页"
+msgstr "الافتراضي - لوحة تحكم مدير ووردبريس: صفحة إرسال سير العمل"
 
 #: includes/class-step-form-submission.php:719
 msgid "Processed"
-msgstr ""
+msgstr "تمت المعالجه"
 
 #: includes/class-step-new-entry.php:20 includes/class-step-new-entry.php:33
 msgid "New Entry"
-msgstr "新条目"
+msgstr "إدخال جديد"
 
 #: includes/class-step-new-entry.php:122
 msgid "Store New Entry ID"
-msgstr "保存新条目ID"
+msgstr "تخزين معرف إدخال جديد"
 
 #: includes/class-step-new-entry.php:125
 msgid "Store the ID of the new entry."
-msgstr "保存新条目的ID"
+msgstr "تخزين معرف الإدخال الجديد."
 
 #: includes/class-step-new-entry.php:190
 msgid "Processed."
-msgstr "处理完成。"
+msgstr "تمت المعالجة."
 
 #: includes/class-step-update-entry.php:20
 #: includes/class-step-update-entry.php:42
 #: includes/class-step-update-entry.php:206
 msgid "Update an Entry"
-msgstr "更新一个条目"
+msgstr "تحديث دخول"
 
 #: includes/class-step-update-entry.php:92
 #: includes/class-step-update-fields.php:95
 msgid "Action"
-msgstr "操作"
+msgstr "الإجراء"
 
 #: includes/class-step-update-entry.php:106
 msgid ""
 "Select the field which will contain the entry ID of the entry that will be "
 "updated. This is used to lookup the entry so it can be updated."
-msgstr "选择包含有将被更新的条目的ID的字段。这将用于查找指定条目以便更新。"
+msgstr ""
+"حدد الحقل الذي سيحتوي على معرف إدخال الإدخال الذي سيتم تحديثه. يستخدم هذا "
+"للبحث عن الإدخال حتى يمكن تحديثه."
 
 #: includes/class-step-update-entry.php:141
 msgid "Approval Status Field"
-msgstr "审批状态字段"
+msgstr "حقل حالة الموافقة"
 
 #: includes/class-step-update-entry.php:179
 #: includes/class-step-update-entry.php:189
 msgid "Assignee"
-msgstr "负责人"
+msgstr "الإحالة"
 
 #: includes/class-step-update-entry.php:244
 msgid "Approval"
-msgstr "批准"
+msgstr "الموافقة"
 
 #: includes/class-step-update-entry.php:247
 msgid "User Input"
-msgstr "用户输入"
+msgstr "إدخال المستخدم"
 
 #: includes/class-step-update-entry.php:747
 msgid "Select an assignee"
-msgstr ""
+msgstr "حدد المعين له"
 
 #: includes/class-step-update-entry.php:753
 msgid "User (created_by)"
-msgstr ""
+msgstr "المستخدم (create_by)"
 
 #: includes/class-step-update-fields.php:20
 msgid "Update Fields"
-msgstr ""
+msgstr "تحديث الحقول"
 
 #: includes/class-step-update-fields.php:45
 #: includes/class-step-update-fields.php:205
 msgid "Update Field Values"
-msgstr ""
+msgstr "تحديث قيم الحقول"
 
 #: includes/class-step-update-fields.php:88
 msgid "Source Form"
-msgstr ""
+msgstr "نموذج المصدر"
 
 #: includes/class-step-update-fields.php:104
 msgid "Entry Lookup"
-msgstr ""
+msgstr "بحث الدخول"
 
 #: includes/class-step-update-fields.php:110
 msgid "Conditional Logic"
-msgstr ""
+msgstr "المنطق الشرطي"
 
 #: includes/class-step-update-fields.php:111
 msgid "Select a field containing the source entry ID."
-msgstr ""
+msgstr "حدد حقلًا يحتوي على معرف إدخال المصدر."
 
 #: includes/class-step-update-fields.php:122
 msgid "Lookup Conditional Logic"
-msgstr ""
+msgstr "بحث المنطق الشرطي"
 
 #: includes/class-step-update-fields.php:124
 msgid "Look up the first entry matching {0} of the following criteria:"
-msgstr ""
+msgstr "ابحث عن الإدخال الأول المطابق {0} للمعايير التالية:"
 
 #: includes/class-step-update-fields.php:140
 msgid ""
 "Select the field which will contain the entry ID of the entry that values "
 "will be copied from."
-msgstr ""
+msgstr "حدد الحقل الذي سيحتوي على معرف إدخال الإدخال الذي سيتم نسخ القيم منه."
 
 #: includes/class-step-update-fields.php:185
 msgid ""
 "Map the fields of the selected form to this form. Values from the selected "
 "entry will be saved in the entry in this form."
 msgstr ""
+"قم بتعيين حقول النموذج المحدد لهذا النموذج. سيتم حفظ القيم من الإدخال المحدد"
+" في الإدخال في هذا النموذج."
 
 #. Plugin Name of the plugin/theme
 msgid "Gravity Flow Form Connector"
-msgstr ""
+msgstr "Gravity Flow Form Connector"
 
 #. Author URI of the plugin/theme
 msgid "https://gravityflow.io"
-msgstr ""
+msgstr "https://gravityflow.io"
 
 #. Description of the plugin/theme
 msgid "Form Connector Extension for Gravity Flow."
-msgstr "连接不同表单的数据"
+msgstr "ملحق Form Connector لGravity Flow."
 
 #. Author of the plugin/theme
 msgid "Gravity Flow"
-msgstr ""
+msgstr "Gravity Flow"

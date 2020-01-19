@@ -2,7 +2,7 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.4
-Tested up to: 5.2
+Tested up to: 5.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -41,6 +41,10 @@ The Gravity Flow Form Connector Extension will work with any license of [Gravity
 
 
 == ChangeLog ==
+
+= 1.7.3 =
+- Added gravityflowformconnector_update_entry_form filter which allows the form of entry for update to be customized/hydrated.
+- Updated translations. Added Catalan and Arabic.
 
 = 1.7.2 =
 - Fixed an issue where the form submission step cannot be released if the payment method set in the target form is Stripe Checkout (Stripe add-on > 3.0).
