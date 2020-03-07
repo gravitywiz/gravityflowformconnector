@@ -1,0 +1,1 @@
+- Added the gravityflowformconnector_new_entry_form and gravityflowformconnector_update_field_values_form filters.
