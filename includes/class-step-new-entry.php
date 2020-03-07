@@ -195,7 +195,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		public function process_local_action() {
 			$entry = $this->get_entry();
 
-			$form = $this->get_form();
+			$form = $this->filter_form( $this->get_form(), $entry );
 
 			$new_entry = $this->do_mapping( $form, $entry );
 
@@ -214,7 +214,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		public function process_remote_action() {
 			$entry = $this->get_entry();
 
-			$form = $this->get_form();
+			$form = $this->filter_form( $this->get_form(), $entry );
 
 			$new_entry = $this->do_mapping( $form, $entry );
 
@@ -679,6 +679,29 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			return $selected_choice;
 		}
+
+		/**
+		 * Allows a form to be filtered before it used to process the step.
+		 *
+		 * @since 1.7.4
+		 *
+		 * @param array $form  The form to be processed.
+		 * @param array $entry The entry being processed.
+		 *
+		 * @return array
+		 */
+		public function filter_form( $form, $entry ) {
+			/**
+			 * Allows the form to be modified before it is processed.
+			 *
+			 * @since 1.7.4
+			 *
+			 * @param array $form  The form to be processed.
+			 * @param array $entry The entry being processed.
+			 */
+			return apply_filters( "gravityflowformconnector_{$this->get_type()}_form", $form, $entry );
+		}
+
 	}
 }
 

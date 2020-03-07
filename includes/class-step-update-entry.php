@@ -264,17 +264,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			$steps = $api->get_steps();
 
-			/**
-			 * Allows the form of entry for update to be customized/hydrated.
-			 *
-			 * @since 1.7.4
-			 *
-			 * @param array|null $form
-			 * @param array|null $entry
-			 *
-			 * @return array
-			 */
-			$form = apply_filters( 'gravityflowformconnector_update_entry_form', $this->get_form(), $entry );
+			$form = $this->filter_form( $this->get_form(), $entry );
 
 			$target_entry_id = rgar( $entry, $this->update_entry_id );
 
@@ -371,7 +361,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 		public function process_remote_action() {
 			$entry = $this->get_entry();
 
-			$form = $this->get_form();
+			$form = $this->filter_form( $this->get_form(), $entry );
 
 			$new_entry = $this->do_mapping( $form, $entry );
 

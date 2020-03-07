@@ -247,23 +247,17 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				return $new_entry;
 			}
 
-			$source_form = $this->get_target_form( $this->source_form_id );
-
-			if ( ! $source_form ) {
-				$this->log_debug( __METHOD__ . '(): aborting; unable to get source form.' );
-
-				return $new_entry;
-			}
+			$target_form = $this->get_form();
 
 			foreach ( $this->mappings as $mapping ) {
 				if ( rgblank( $mapping['key'] ) ) {
 					continue;
 				}
 
-				$new_entry = $this->add_mapping_to_entry( $mapping, $entry, $new_entry, $form, $this->get_form() );
+				$new_entry = $this->add_mapping_to_entry( $mapping, $entry, $new_entry, $form, $target_form );
 			}
 
-			return apply_filters( 'gravityflowformconnector_' . $this->get_type(), $new_entry, $entry, $form, $source_form, $this );
+			return apply_filters( 'gravityflowformconnector_' . $this->get_type(), $new_entry, $entry, $form, $target_form, $this );
 		}
 
 		public function process_local_action() {
@@ -276,6 +270,10 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 
 			$source_form = GFAPI::get_form( $source_form_id );
 
+			if ( empty( $source_form ) ) {
+				return true;
+			}
+
 			$source_entry_id = rgar( $entry, $this->source_entry_id );
 
 			$source_entry = $this->get_local_entry( $source_entry_id, $source_form_id, $entry, $form );
@@ -284,7 +282,7 @@ if ( class_exists( 'Gravity_Flow_Step' ) ) {
 				return true;
 			}
 
-			$new_entry = $this->do_mapping( $source_form, $source_entry );
+			$new_entry = $this->do_mapping( $this->filter_form( $source_form, $source_entry ), $source_entry );
 
 			foreach ( $new_entry as $key => $value ) {
 				$entry[ (string) $key ] = $value;
