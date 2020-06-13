@@ -661,7 +661,9 @@ if ( class_exists( 'GFForms' ) ) {
 				return $text;
 			}
 
+			remove_filter( 'gform_pre_replace_merge_tags', array( $this, 'filter_gform_pre_replace_merge_tags' ) );
 			$step = gravity_flow()->get_current_step( $form, $entry );
+			add_filter( 'gform_pre_replace_merge_tags', array( $this, 'filter_gform_pre_replace_merge_tags' ), 10, 7 );
 
 			if ( empty( $step ) ) {
 				return $text;
