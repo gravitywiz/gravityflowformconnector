@@ -2,9 +2,9 @@
 Contributors: stevehenty
 Tags: gravity forms, approvals, workflow
 Requires at least: 4.4
-Tested up to: 5.3.2
+Tested up to: 5.4.2
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Create, update and link entries in Gravity Flow.
 
@@ -41,6 +41,11 @@ The Gravity Flow Form Connector Extension will work with any license of [Gravity
 
 
 == ChangeLog ==
+
+= 1.7.4 =
+- Added the gravityflowformconnector_new_entry_form and gravityflowformconnector_update_field_values_form filters.
+- Fixed issue with merge tag evaluation that caused a fatal error involving certain conditional logic setup. Update to Gravity Flow 2.5.11 will also be required.
+
 
 = 1.7.3 =
 - Added gravityflowformconnector_update_entry_form filter which allows the form of entry for update to be customized/hydrated.

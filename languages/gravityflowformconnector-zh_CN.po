@@ -1,4 +1,4 @@
-# Copyright 2015-2019 Steven Henty.
+# Copyright 2015-2020 Steven Henty.
 # Translators:
 # Edi Weigh <michaeledi@163.com>, 2017
 # 
@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gravityflowformconnector\n"
 "Report-Msgid-Bugs-To: https://www.gravityflow.io\n"
-"POT-Creation-Date: 2019-10-12 14:13:46+00:00\n"
+"POT-Creation-Date: 2020-01-19 15:48:48+00:00\n"
 "PO-Revision-Date: 2016-11-16 22:17+0000\n"
 "Last-Translator: Edi Weigh <michaeledi@163.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/gravityflow/teams/50678/zh_CN/)\n"
@@ -384,11 +384,11 @@ msgstr "批准"
 msgid "User Input"
 msgstr "用户输入"
 
-#: includes/class-step-update-entry.php:747
+#: includes/class-step-update-entry.php:757
 msgid "Select an assignee"
 msgstr ""
 
-#: includes/class-step-update-entry.php:753
+#: includes/class-step-update-entry.php:763
 msgid "User (created_by)"
 msgstr ""
 
